@@ -1,0 +1,61 @@
+4.0.4
+
+XP mod as option
+
+4.1
+
+Important update, hugely lowered download size while joining game. Also updated XP Mod
+
+4.1a, 4.1b, 4.1c
+
+Fixed Tent units, update few min later, changed ageless waves back to option as was before, more fixes
+
+4.1d
+
+Fixed XP Mod
+
+4.1e
+
+Few changes about upkeep and income and gold
+
+4.2a
+
+Added option to use ron's map and everything included, turn 36 wave fixed
+Changed options text as requested by jistanidiot
+Bullet code in objectives removed
+
+4.2b
+
+Fixed wrong random max value for level 0 units array
+
+4.2c
+
+Added support for castle destruction for other map
+
+4.3
+
+Changed units list according to my ageless update, added new units to list, advances message to chat instead
+
+4.3a
+
+Fixed Sproutling
+
+4.3b
+
+Fixed few level 2 units appearing in level 1 list
+Set max movecost of flat and shallow water to 3 and min moves to 3
+Added new EFM imperialists units
+Strike color from (0,0,255) to (74,247,187)
+
+4.4
+
+Lists changed to work with ageless 4.12
+Lists changed to work with lua instead of wml, this way should be more efficient
+Removed tent for default waves, because of redundant code, possibly only for this version
+Turn 40 makes all side 1 units undead
+Tried to make accidentally skipping upgrade option less likely, didnt seem to be too effective
+Found out that lua needs to be within cfg files to be sent
+
+4.4a
+
+Tent units changed from side 1 to side that moved there

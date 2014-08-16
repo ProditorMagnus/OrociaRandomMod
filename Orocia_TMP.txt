@@ -1,0 +1,117 @@
+This "Orocia (TMP)" map pack contains the Orocia scenarios.
+I'm simply too addicted to wait for Necromonger to port them...
+
+----------
+Scenario/Modification Credits
+----------
+- Dovolente: original scenario.
+- Necromonger (noosel@gmx.de): new scenarios/upgrade types and statistics/random/...
+- norbert: port to 1.8 and bug fixes.
+- itota: Japanese translations.
+
+----------
+Version History
+----------
+Changes v3.7.3 - v3.7.5
+- Japanese translations improved by itota
+
+Changes v3.7.2
+- added Japanese translations by itota
+
+Changes v3.7.1
+- ported from 1.6 to 1.8 (Drakes;folder;preprocessor;text)
+- misc\temple.png->scenery/temple1.png
+- soemthing->something
+- araound->around
+- weaopn->weapon
+- quotes around text in OROCIARM_CHOOSE_UPGRADE and OROCIARM_CHOOSE_UPGRADE_NEW
+
+Changes v3.7.0
+- ...
+
+Changes v3.6.2
+- Balanceing PoO: Fewer enemies in middle wave
+- BugFix PoO: No regular enemy recruitment before end game
+- Bug fix: Tents + upgrades now are shown
+
+Changes v3.6.1
+- fixed bug: error message on normal 3p, 4p orocia maps when using tents
+
+Changes v3.6.0
+- add configuration menu to begin
+
+Changes v3.5.0
+- add destruction mode for static orocia maps
+- add 3p version of Random Orocia
+
+Changes v3.4.0
+- new Random Orocia Map (random spawns)
+- 4p: Fixed spawns of last yeti waves (now for each player one set)
+
+Changes v3.3.4
+- PoO: Fixed boss leader now have no moves
+
+Changes v3.3.3
+- Fixed upgrade bug
+
+Changes v3.3.2
+- PoO: Some balanceing
+
+Changes v3.3.1
+- PoO: bugfix - Saurian wave positioning corrected
+- PoO: enhancement - spawn on turn 43 trigger-> 4. castle
+- PoO: bugfix - Recruiting of red in end game corrected
+- PoO: Victory message corrected
+
+Changes v3.3.0
+- PoO: Balanceing enemy waves (harder)
+- PoO: Change enemy defense castle
+- PoO: Enemy boss now recruit triggered by last barriere
+- PoO: Victory message
+
+Changes v3.2.0
+- PoO: add 2 weapon arsenals (one free weapon for each side for unit)
+- PoO: add 3 allied tents (2 lvl2 units for visited side)
+- PoO: upgrade message/sound now only showed/played if mages are alive
+- PoO: remove one trigger section (game play was too hard before) 
+- PoO: Enhance messageing for next waves
+- PoO: Triggered waves are now have a sound effect at begin
+
+Changes v3.1.1
+- deactivate experience upgrades. Provokes OOS due to Wesnoth bug
+- PoO: fix bug preventing Pilgrims of Orocia from starting (frozen on side 1, white)
+
+Changes v3.1.0
+- PoO: enhance map graphics (now more differences to sx map)
+- new effects for unit upgrades (was bug walk around in v3.0.2). No use of oos critical code
+- new unit icons for last upgrade
+
+Changes v3.0.2
+- bug work around: provokes server errors in some cases (unstore_unit, attribute: resistance)
+
+Changes v3.0.1
+- bugfix: provokes server errors in some cases (unstore_unit, attribute: advance)
+
+Changes v3.0.0
+- add scenario Pilgrims od Orocia
+- change label color to orange
+- enhance defense +3 -> +5 in mega chaos
+- bugfix exp from +6 -> +8
+
+Changes v2.2.4
+- bugfix: fixed oos problems (hurray)
+
+Changes v2.2.3
+- reimplement res upgrade. Hope it works
+
+Changes v2.2.2-14
+- bug prevention: Remove resistance upgrade cause it provokes oos messages
+- change xp from 8 to 6 (seems to be calculated other than in wesnoth 1.2)
+
+Changes v2.2.1-14
+- Convert v2.2.1 to wesnoth 1.3.19 (features of wesnoth 1.28 version)
+- change upgrade icon
+- change statistics view
+
+Changes v1.6.3-14
+- Convert v1.6.3 to wesnoth 1.4 beta3
