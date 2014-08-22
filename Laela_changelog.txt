@@ -59,3 +59,7 @@ Found out that lua needs to be within cfg files to be sent
 4.4a
 
 Tent units changed from side 1 to side that moved there
+
+4.4b
+
+Fixed leaders having same id and sometimes disappearing because of that
