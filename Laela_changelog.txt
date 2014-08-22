@@ -63,3 +63,7 @@ Tent units changed from side 1 to side that moved there
 4.4b
 
 Fixed leaders having same id and sometimes disappearing because of that
+
+4.4c?
+
+Removed AE_arc_khthon_Spark - scout unit without attacks, likely campaign only
