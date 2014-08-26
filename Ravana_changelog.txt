@@ -63,7 +63,12 @@ Tent units changed from side 1 to side that moved there
 4.4b
 
 Fixed leaders having same id and sometimes disappearing because of that
+Started using Ravana instead of Laela as main display name
 
-4.4c?
+4.4.1
 
 Removed AE_arc_khthon_Spark - scout unit without attacks, likely campaign only
+Changed settings from menu to scenario settings
+Made xp mod and advance planning dependencies instead of including them in scenario directly
+Added difficulty settings as health multipliers for waves units
+Marked this addon as ported
