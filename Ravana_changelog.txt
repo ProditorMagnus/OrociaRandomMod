@@ -80,3 +80,7 @@ Fixed ai buff at turns 24 and 28
 4.4.2
 
 Fixed inability to use savegames
+
+4.4.2a
+
+Fixed incorrectly replaced Golem Wood Defender
