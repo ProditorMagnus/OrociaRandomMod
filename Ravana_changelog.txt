@@ -72,3 +72,7 @@ Changed settings from menu to scenario settings
 Made xp mod and advance planning dependencies instead of including them in scenario directly
 Added difficulty settings as health multipliers for waves units
 Marked this addon as ported
+
+4.4.1a
+
+Fixed ai buff at turns 24 and 28
