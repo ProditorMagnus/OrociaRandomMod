@@ -76,3 +76,7 @@ Marked this addon as ported
 4.4.1a
 
 Fixed ai buff at turns 24 and 28
+
+4.4.2
+
+Fixed inability to use savegames
