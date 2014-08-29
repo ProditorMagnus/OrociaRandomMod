@@ -84,3 +84,7 @@ Fixed inability to use savegames
 4.4.2a
 
 Fixed incorrectly replaced Golem Wood Defender
+
+4.4.2b
+
+Massively lowered ai stat buffs
