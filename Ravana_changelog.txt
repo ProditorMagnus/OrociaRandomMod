@@ -88,3 +88,7 @@ Fixed incorrectly replaced Golem Wood Defender
 4.4.2b
 
 Massively lowered ai stat buffs
+
+4.4.2c
+
+Removed hiding terrapins from units lists
