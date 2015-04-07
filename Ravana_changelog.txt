@@ -96,3 +96,7 @@ Removed hiding terrapins from units lists
 4.4.2d
 
 Allowed tent if either ageless waves or ageless era is used
+
+4.4.2e
+
+Fixed randomless
