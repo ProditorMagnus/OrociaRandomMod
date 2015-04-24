@@ -100,3 +100,17 @@ Allowed tent if either ageless waves or ageless era is used
 4.4.2e
 
 Fixed randomless
+
+4.4.3
+
+Removed bak files
+Changed credits and objectives
+Removed fog, hid enemy leader
+Village destruction changed to need 2 moves to remove village
+Additional desert and snow maps
+Removed [binary_path]
+Charge and backstab lowered to 1.7x
+Villag support increased to 2
+Renamed options variables, possibly causing problems with preferences
+Finally readded show all settings
+Changed ai aggressiveness parameters to be slightly less aggressive
