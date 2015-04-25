@@ -121,3 +121,9 @@ Arsenal and tent changed to turn 1
 Massive rewrite of upgrade code
 New maps updated
 Removed unneeded code
+
+4.4.3b
+
+Moved settings labels 7 hexes down
+Fixed fall map arsenals
+
