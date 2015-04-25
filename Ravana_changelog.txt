@@ -114,3 +114,10 @@ Villag support increased to 2
 Renamed options variables, possibly causing problems with preferences
 Finally readded show all settings
 Changed ai aggressiveness parameters to be slightly less aggressive
+
+4.4.3a
+
+Arsenal and tent changed to turn 1
+Massive rewrite of upgrade code
+New maps updated
+Removed unneeded code
