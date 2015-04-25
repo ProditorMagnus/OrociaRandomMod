@@ -124,6 +124,6 @@ Removed unneeded code
 
 4.4.3b
 
-Moved settings labels 7 hexes down
+Moved settings labels 8 hexes down
 Fixed fall map arsenals
 
