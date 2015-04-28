@@ -127,3 +127,6 @@ Removed unneeded code
 Moved settings labels 8 hexes down
 Fixed fall map arsenals
 
+4.4.3c
+
+Added tents list for default
