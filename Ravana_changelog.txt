@@ -135,4 +135,4 @@ Added tents list for default
 
 Added turn 46 label for ageless waves
 Lists changed to work with ageless 4.13
-
+Upgrades added to default waves
