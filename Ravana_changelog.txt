@@ -110,7 +110,7 @@ Village destruction changed to need 2 moves to remove village
 Additional desert and snow maps
 Removed [binary_path]
 Charge and backstab lowered to 1.7x
-Villag support increased to 2
+Village support increased to 2
 Renamed options variables, possibly causing problems with preferences
 Finally readded show all settings
 Changed ai aggressiveness parameters to be slightly less aggressive
@@ -130,3 +130,9 @@ Fixed fall map arsenals
 4.4.3c
 
 Added tents list for default
+
+4.5
+
+Added turn 46 label for ageless waves
+Lists changed to work with ageless 4.13
+
