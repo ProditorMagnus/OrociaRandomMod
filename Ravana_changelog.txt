@@ -135,4 +135,7 @@ Added tents list for default
 
 Added turn 46 label for ageless waves
 Lists changed to work with ageless 4.13
-Upgrades added to default waves
+Upgrades added to default waves - possibly quite op
+Wave modifications to traits
+Ice map allows undo when wind is not active
+Arsenal cant use message only to current side
