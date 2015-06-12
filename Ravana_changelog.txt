@@ -144,3 +144,8 @@ Arsenal cant use message only to current side
 
 swift spelling
 removed runelaying units as they break undo moves
+
+4.5b
+
+Fixed turn 31 default label
+Added random_start_time=no as it seems that despite reference saying it defaults to no, it defaults to yes in 1.12 multiplayer
