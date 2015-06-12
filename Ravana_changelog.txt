@@ -149,3 +149,7 @@ removed runelaying units as they break undo moves
 
 Fixed turn 31 default label
 Added random_start_time=no as it seems that despite reference saying it defaults to no, it defaults to yes in 1.12 multiplayer
+
+4.5c
+
+Default waves must become undead as well
