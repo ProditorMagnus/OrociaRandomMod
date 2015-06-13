@@ -153,3 +153,7 @@ Added random_start_time=no as it seems that despite reference saying it defaults
 4.5c
 
 Default waves must become undead as well
+
+4.5d
+
+Added first_time_only=no for event that checks for loss condition
