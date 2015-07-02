@@ -157,3 +157,6 @@ Default waves must become undead as well
 4.5d
 
 Added first_time_only=no for event that checks for loss condition
+Added option for forcing 1 tent unit be healer
+Switch Leader added to dependencies
+Removed shifters from units lists
