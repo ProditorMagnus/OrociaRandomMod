@@ -160,3 +160,9 @@ Added first_time_only=no for event that checks for loss condition
 Added option for forcing 1 tent unit be healer
 Switch Leader added to dependencies
 Removed shifters from units lists
+
+4.5e
+
+Fixed tent healer label
+Smart game end by force end turns
+Added scroll_to_leader=no to ai side
