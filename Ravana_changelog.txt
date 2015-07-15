@@ -166,3 +166,8 @@ Removed shifters from units lists
 Fixed tent healer label
 Smart game end by force end turns
 Added scroll_to_leader=no to ai side
+
+4.5f
+
+Fixed settings default true/false to yes/no
+Added dependencies Color_Modification and Ally_Village_Modification
