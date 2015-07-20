@@ -171,3 +171,7 @@ Added scroll_to_leader=no to ai side
 
 Fixed settings default true/false to yes/no
 Added dependencies Color_Modification and Ally_Village_Modification
+
+?.?
+
+Removed lms
