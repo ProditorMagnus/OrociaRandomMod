@@ -172,6 +172,7 @@ Added scroll_to_leader=no to ai side
 Fixed settings default true/false to yes/no
 Added dependencies Color_Modification and Ally_Village_Modification
 
-?.?
+4.5g
 
 Removed lms
+Added rightclick menu at arsenal to see if that side has already visited that arsenal
