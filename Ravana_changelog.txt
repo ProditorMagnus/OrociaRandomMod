@@ -176,3 +176,7 @@ Added dependencies Color_Modification and Ally_Village_Modification
 
 Removed lms
 Added rightclick menu at arsenal to see if that side has already visited that arsenal
+
+?
+
+inferenai->infernai
