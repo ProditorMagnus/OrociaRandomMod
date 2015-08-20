@@ -177,6 +177,10 @@ Added dependencies Color_Modification and Ally_Village_Modification
 Removed lms
 Added rightclick menu at arsenal to see if that side has already visited that arsenal
 
-?
+4.6
 
-inferenai->infernai
+Update for ageless 4.14
+map_passable changed from undefined variable to string, should be no more out of map waves
+objectives added silent=yes
+lua moved directly to preload event without saving it to variable
+Allowed undo after using arsenal menu
