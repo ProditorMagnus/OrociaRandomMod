@@ -189,3 +189,4 @@ Allowed undo after using arsenal menu
 
 Removed Archaic stone statues as they cause crashes when created in ways other than recruiting
 Replaced core waves mp with damage
+Clarified individual upgrades description and made default yes
