@@ -188,3 +188,4 @@ Allowed undo after using arsenal menu
 4.6a
 
 Removed Archaic stone statues as they cause crashes when created in ways other than recruiting
+Replaced core waves mp with damage
