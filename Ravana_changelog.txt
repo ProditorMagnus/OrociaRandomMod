@@ -184,3 +184,7 @@ map_passable changed from undefined variable to string, should be no more out of
 objectives added silent=yes
 lua moved directly to preload event without saving it to variable
 Allowed undo after using arsenal menu
+
+4.6a
+
+Removed Archaic stone statues as they cause crashes when created in ways other than recruiting
