@@ -190,3 +190,10 @@ Allowed undo after using arsenal menu
 Removed Archaic stone statues as they cause crashes when created in ways other than recruiting
 Replaced core waves mp with damage
 Clarified individual upgrades description and made default yes
+
+4.6.1
+
+Tent macro split from arsenal file
+Lua unit lists setup moved from scenario file to utils
+More code moving
+
