@@ -197,3 +197,4 @@ Tent macro split from arsenal file
 Lua unit lists setup moved from scenario file to utils
 More code moving
 Excluded hiding turtles from movecost lowering
+Experimental difficulty setting: gives rating based on settings/modifications used, and changed wave bonus values based on that
