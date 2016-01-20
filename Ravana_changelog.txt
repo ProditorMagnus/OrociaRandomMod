@@ -202,6 +202,9 @@ Experimental difficulty setting: gives rating based on settings/modifications us
 4.7a
 
 Remove turn limit if any used
+Schedule turn 21 to night if nonageless waves
+Castle destruction default changed to off - beginners dont know how to play with it
+Wavetype choice changed to combo setting
 
 4.7a todo
 
