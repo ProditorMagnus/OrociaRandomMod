@@ -205,7 +205,14 @@ Remove turn limit if any used
 Schedule turn 21 to night if nonageless waves
 Castle destruction default changed to off - beginners dont know how to play with it
 Wavetype choice changed to combo setting
+WIP predefined ageless waveset
 
 4.7a todo
 
 Detect unity magic
+
+4.7b todo
+Look if some bonuses needed for waves with divergence
+
+4.x todo
+Create release only if ageless version changes
