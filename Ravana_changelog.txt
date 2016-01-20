@@ -206,9 +206,6 @@ Schedule turn 21 to night if nonageless waves
 Castle destruction default changed to off - beginners dont know how to play with it
 Wavetype choice changed to combo setting
 WIP predefined ageless waveset
-
-4.7a todo
-
 Detect unity magic
 
 4.7b todo
