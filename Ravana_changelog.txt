@@ -198,3 +198,11 @@ Lua unit lists setup moved from scenario file to utils
 More code moving
 Excluded hiding turtles from movecost lowering
 Experimental difficulty setting: gives rating based on settings/modifications used, and changed wave bonus values based on that
+
+4.7a
+
+Remove turn limit if any used
+
+4.7a todo
+
+Detect unity magic
