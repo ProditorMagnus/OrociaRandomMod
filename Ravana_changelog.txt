@@ -207,6 +207,7 @@ Castle destruction default changed to off - beginners dont know how to play with
 Wavetype choice changed to combo setting
 WIP predefined ageless waveset
 Detect unity magic
+Fixed AE_ext_monsters_Fire_Warrior_Spirit level
 
 4.7b todo
 Look if some bonuses needed for waves with divergence
