@@ -209,9 +209,13 @@ WIP predefined ageless waveset
 Detect unity magic
 Fixed AE_ext_monsters_Fire_Warrior_Spirit level
 Removed limitation keeping first turn units immobile
+Fixed mp bonus not affecting spawn turn movement
+Made predefined waveset easier
 
 4.7b todo
 Look if some bonuses needed for waves with divergence
+Consider if ronsmap items should be sidelocked
 
 4.x todo
 Create release only if ageless version changes
+Detect weaker factions
