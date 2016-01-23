@@ -219,9 +219,13 @@ Experimental difficulty label managing
 4.7b todo
 Look if some bonuses needed for waves with divergence
 Consider if ronsmap items should be sidelocked
-Add option for base difficulty %
+Add option for base difficulty %, no upload before done
 Look xp setting too, but not very importantly
+No upload before khthon is gone
+Make zonk temporary
+Have easy mode
 
 4.x todo
 Create release only if ageless version changes
 Detect weaker factions
+Make zonk less powerful
