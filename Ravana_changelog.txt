@@ -197,7 +197,7 @@ Tent macro split from arsenal file
 Lua unit lists setup moved from scenario file to utils
 More code moving
 Excluded hiding turtles from movecost lowering
-Experimental difficulty setting: gives rating based on settings/modifications used, and changed wave bonus values based on that
+Experimental difficulty setting: gives rating based on settings/modifications used, and changes wave bonus values based on that
 
 4.7a
 
@@ -212,9 +212,14 @@ Removed limitation keeping first turn units immobile
 Fixed mp bonus not affecting spawn turn movement
 Made predefined waveset easier
 
+4.7b
+Note that randomless invalidates individual upgrades
+
 4.7b todo
 Look if some bonuses needed for waves with divergence
 Consider if ronsmap items should be sidelocked
+Add option for base difficulty %
+Look xp setting too, but not very importantly
 
 4.x todo
 Create release only if ageless version changes
