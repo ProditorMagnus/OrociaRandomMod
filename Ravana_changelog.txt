@@ -214,6 +214,7 @@ Made predefined waveset easier
 
 4.7b
 Note that randomless invalidates individual upgrades
+Experimental difficulty label managing
 
 4.7b todo
 Look if some bonuses needed for waves with divergence
