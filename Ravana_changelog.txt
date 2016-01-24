@@ -215,17 +215,17 @@ Made predefined waveset easier
 4.7b
 Note that randomless invalidates individual upgrades
 Experimental difficulty label managing
+Difficulties: Hardcore, Normal, Easy
+
 
 4.7b todo
 Look if some bonuses needed for waves with divergence
 Consider if ronsmap items should be sidelocked
-Add option for base difficulty %, no upload before done
 Look xp setting too, but not very importantly
-No upload before khthon is gone
-Make zonk temporary
-Have easy mode
+No upload before khthon is gone from predefined waves
+
 
 4.x todo
 Create release only if ageless version changes
 Detect weaker factions
-Make zonk less powerful
+Make zonk less powerful, temporary
