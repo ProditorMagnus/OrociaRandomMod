@@ -219,8 +219,12 @@ Difficulties: Hardcore, Normal, Easy
 Removed shifters/wildermen
 Remove khthon from predefined waves
 
+4.7c
+Labels visible through shroud
 
-4.7b todo
+
+4.7c todo
+If player uses red then make side 1 different color
 
 
 4.x todo
