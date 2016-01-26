@@ -216,16 +216,18 @@ Made predefined waveset easier
 Note that randomless invalidates individual upgrades
 Experimental difficulty label managing
 Difficulties: Hardcore, Normal, Easy
+Removed shifters/wildermen
+Remove khthon from predefined waves
 
 
 4.7b todo
-Look if some bonuses needed for waves with divergence
-Consider if ronsmap items should be sidelocked
-Look xp setting too, but not very importantly
-No upload before khthon is gone from predefined waves
 
 
 4.x todo
 Create release only if ageless version changes
 Detect weaker factions
 Make zonk less powerful, temporary
+Look if some bonuses needed for waves with divergence
+Consider if ronsmap items should be sidelocked
+Look xp setting too, but not very importantly
+Fix spawn locations - west getting more units than east
