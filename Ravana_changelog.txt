@@ -221,13 +221,10 @@ Remove khthon from predefined waves
 
 4.7c
 Labels visible through shroud
-Remove & from objectives
+Remove ampersand from objectives
 Tent healer possible for core waves
 
 
-4.7c todo
-If player uses red then make side 1 different color, gold, orange, white
-Fix the spawn locations of 36
 
 
 4.x todo
@@ -238,3 +235,5 @@ Look if some bonuses needed for waves with divergence
 Consider if ronsmap items should be sidelocked
 Look xp setting too, but not very importantly
 Fix spawn locations - west getting more units than east
+If player uses red then make side 1 different color, gold, orange, white
+
