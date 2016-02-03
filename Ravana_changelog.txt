@@ -221,10 +221,13 @@ Remove khthon from predefined waves
 
 4.7c
 Labels visible through shroud
+Remove & from objectives
+Tent healer possible for core waves
 
 
 4.7c todo
-If player uses red then make side 1 different color
+If player uses red then make side 1 different color, gold, orange, white
+Fix the spawn locations of 36
 
 
 4.x todo
