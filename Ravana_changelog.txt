@@ -227,6 +227,8 @@ Tent healer possible for core waves
 4.7d
 Fixed special waves labels for normal
 
+4.8
+Update for ageless 4.15
 
 4.x todo
 Create release only if ageless version changes
