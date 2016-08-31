@@ -230,6 +230,12 @@ Fixed special waves labels for normal
 4.8
 Update for ageless 4.15
 
+4.8a
+Fix spawn locations - west getting more units than east = Changed spawn locations x of 28 to 25
+
+4.9
+Update for ageless 4.16
+
 4.x todo
 Create release only if ageless version changes
 Detect weaker factions
@@ -237,8 +243,5 @@ Make zonk less powerful, temporary
 Look if some bonuses needed for waves with divergence
 Consider if ronsmap items should be sidelocked - ron said that can be - to be implemented later
 Look xp setting too, but not very importantly
-Fix spawn locations - west getting more units than east
 If player uses red then make side 1 different color, gold, orange, white
 Rewrite ageless tent to compact lua
-
-
