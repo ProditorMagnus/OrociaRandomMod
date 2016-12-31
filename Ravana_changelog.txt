@@ -236,6 +236,10 @@ Fix spawn locations - west getting more units than east = Changed spawn location
 4.9
 Update for ageless 4.16
 
+4.9.1
+Ageless 4.17 did not remove any units, so did not regenerate lists this time
+Fix duplicate arsenal events for Fall map
+
 4.x todo
 Create release only if ageless version changes
 Detect weaker factions
