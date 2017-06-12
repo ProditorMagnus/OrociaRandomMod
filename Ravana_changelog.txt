@@ -240,7 +240,19 @@ Update for ageless 4.16
 Ageless 4.17 did not remove any units, so did not regenerate lists this time
 Fix duplicate arsenal events for Fall map
 
+4.10
+Update for ageless 4.18
+On EXI_Rush_Mod waves start with double movement
+On hardcore village_support is 1
+Hardcore village support back to 1
+Disable predefined waves, with EoM and EoMa ids changed, needs more work to allow this
+Weak trait only applies on attack with more than 1 damage
+All units can move on castle
+Detect StealingWeaponsMode and BonusSpam and EXI_Heroic_Mod
+
+
 4.x todo
+
 Create release only if ageless version changes
 Detect weaker factions
 Make zonk less powerful, temporary
