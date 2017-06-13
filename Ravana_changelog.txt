@@ -243,12 +243,12 @@ Fix duplicate arsenal events for Fall map
 4.10
 Update for ageless 4.18
 On EXI_Rush_Mod waves start with double movement
-On hardcore village_support is 1
-Hardcore village support back to 1
+Hardcore village support is back to 1
 Disable predefined waves, with EoM and EoMa ids changed, needs more work to allow this
 Weak trait only applies on attack with more than 1 damage
 All units can move on castle
 Detect StealingWeaponsMode and BonusSpam and EXI_Heroic_Mod
+Win at turn 46 side 2, so that ai wont move after game is over
 
 
 4.x todo
