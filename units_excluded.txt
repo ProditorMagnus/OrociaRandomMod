@@ -1,5 +1,6 @@
 AE_agl_steelhive_Lightshifter
 AE_arc_khthon_Terrapin_Hiding
+AE_mag_Walking_Corpse
 AE_mrc_oracles_Scholar
 AE_arc_khthon_Bone_Snapper_Hiding
 AE_arc_khthon_Land_Tortoise_Hiding

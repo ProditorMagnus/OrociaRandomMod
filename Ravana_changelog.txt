@@ -250,6 +250,8 @@ All units can move on castle
 Detect StealingWeaponsMode and BonusSpam and EXI_Heroic_Mod
 Win at turn 46 side 2, so that ai wont move after game is over
 
+4.10.1
+Change rush mod to 1.5 and not on turn 1, remove AE_mag_Walking_Corpse from list since it spawns without attacks
 
 4.x todo
 
