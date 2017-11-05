@@ -268,8 +268,16 @@ If .gitignore exists in addon folder, additional settings are displayed. Only on
 Catch CanBeOnlyOne
 Change rush mod to 1.8 if CD is off
 
+4.10.6
+Add ultra hardcore setting where 31-40 waves get two traits, hp multiplier is 1.2, adaptive difficulty starts with 1.2, each turn increases hp multiplier by 0.02, early wave has +1 damage
+
+4.10.6a
+Ultra hardcore hp multiplier start lowered to 1.1, increase lowered to 0.01.
+
 
 4.x todo
+
+! must fix saves/replay with ultra
 
 Create release only if ageless version changes
 Detect weaker factions
@@ -281,3 +289,4 @@ Consider if ronsmap items should be sidelocked - ron said that can be - to be im
 Look xp setting too, but not very importantly
 If player uses red then make side 1 different color, gold, orange, white
 Rewrite ageless tent to compact lua
+Make stuff configurable during game, allow setting start value, and per wave increase, with 120 and 0.02 as initially, see what can be moved to Lua
