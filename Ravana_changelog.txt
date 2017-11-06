@@ -274,6 +274,9 @@ Add ultra hardcore setting where 31-40 waves get two traits, hp multiplier is 1.
 4.10.6a
 Ultra hardcore hp multiplier start lowered to 1.1, increase lowered to 0.01.
 
+4.10.6b
+Add wave trait labels to ultra hardcore
+Ultra hardcore turn 36 multipliers lowered: hp 40->15, damage 15->10, turn 40 hp 20->10
 
 4.x todo
 
