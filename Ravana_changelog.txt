@@ -278,6 +278,10 @@ Ultra hardcore hp multiplier start lowered to 1.1, increase lowered to 0.01.
 Add wave trait labels to ultra hardcore
 Ultra hardcore turn 36 multipliers lowered: hp 40->15, damage 15->10, turn 40 hp 20->10
 
+4.10.6c
+Remove [chat] when upgrade fails
+
+
 4.x todo
 
 ! must fix saves/replay with ultra
@@ -293,3 +297,5 @@ Look xp setting too, but not very importantly
 If player uses red then make side 1 different color, gold, orange, white
 Rewrite ageless tent to compact lua
 Make stuff configurable during game, allow setting start value, and per wave increase, with 120 and 0.02 as initially, see what can be moved to Lua
+Persistent score database
+
