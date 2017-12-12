@@ -286,6 +286,7 @@ Remove [chat] when upgrade fails
 
 ! must fix saves/replay with ultra
 
+Infinite waves with unit type names changed like http://files.wesnoth.org/addons/1.12/Better_Names.tar.bz2
 Create release only if ageless version changes
 Detect weaker factions
 Make zonk less powerful, temporary
