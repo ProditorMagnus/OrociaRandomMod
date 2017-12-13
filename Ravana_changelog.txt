@@ -281,6 +281,10 @@ Ultra hardcore turn 36 multipliers lowered: hp 40->15, damage 15->10, turn 40 hp
 4.10.6c
 Remove [chat] when upgrade fails
 
+4.10.6+dev
+Move unit spawn logic to Lua
+
+
 
 4.x todo
 
