@@ -19,7 +19,7 @@ land_near_3 = {
 }
 land_near_6 = {
 	{x=4, y=16},
-	{x=3, y=16},
+	{x=3, y=13}, -- was 3,16 but moved to 3,13
 	{x=21, y=20},
 	{x=24, y=16},
 	{x=18, y=3},

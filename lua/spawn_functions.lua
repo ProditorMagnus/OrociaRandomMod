@@ -18,7 +18,7 @@ function spawnUnitSet(level, location, original_type)
 	local waveSetting = wesnoth.get_variable "ORM_wave_choice_setting"
 	
 	if levelMap[level] == nil then
-		wesnoth.message("_spawnUnitSet_","level "..level.."not implemented")
+		wesnoth.message("_spawnUnitSet_","level "..level.." not implemented")
 		return
 	end
 	level = levelMap[level]
@@ -54,6 +54,59 @@ function spawnWave()
 	--		for j,loc in ipairs(v.location) do
 	--			wesnoth.message("_del_","should create "..v.original_type.."at "..loc.x..", "..loc.y)
 	--		end
+		end
+	end
+end
+
+function backport_label(cfg)
+	-- for 1.13 remove in favor of wesnoth.label()
+	wesnoth.fire("label", { x = cfg.x, y = cfg.y, text = cfg.text, color = cfg.color, visible_in_fog = cfg.visible_in_fog, visible_in_shroud = cfg.visible_in_shroud, immutable = cfg.immutable })
+end
+
+function updateSpawnLabels()
+-- remove labels after spawning
+	if waves["t"..wesnoth.current.turn] ~= nil then
+		for i,v in ipairs(waves["t"..wesnoth.current.turn]) do
+			for j,loc in ipairs(v.location) do
+				backport_label({
+					x=loc.x,
+					y=loc.y,
+					text="",
+					color="255,127,0",
+					visible_in_fog=true,
+					visible_in_shroud=true,
+					immutable=false
+				})
+			end
+		end
+	end
+
+	if waves["t"..wesnoth.current.turn+1] == nil then
+		return
+	end
+
+	for i,v in ipairs(waves["t"..wesnoth.current.turn+1]) do
+		for j,loc in ipairs(v.location) do
+			local waveSetting = wesnoth.get_variable "ORM_wave_choice_setting"
+			local label_text = "Unhandled waveSetting "..waveSetting..", report"
+			if waveSetting == "ageless_random_full" then
+				label_text = "Level "..v.random_level
+			end
+			if waveSetting == "ageless_random_mirrored" then
+				label_text = "Level "..v.random_level.." group "..i
+			end
+			if waveSetting == "core_predefined" then
+				label_text = v.original_type
+			end
+			backport_label({
+				x=loc.x,
+				y=loc.y,
+				text=label_text,
+				color="255,127,0",
+				visible_in_fog=true,
+				visible_in_shroud=true,
+				immutable=false
+			})
 		end
 	end
 end

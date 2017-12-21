@@ -17,7 +17,8 @@ level_two_healer = {"AE_agl_frozen_frost_witch","AE_bem_anakes_Hierophant","AE_b
 levelMap = {
 	[0]=level_zero,
 	[1]=level_one,
-	[2]=level_three,
-	[3]=level_four
+	[2]=level_two,
+	[3]=level_three,
+	[4]=level_four
 }
 -->>

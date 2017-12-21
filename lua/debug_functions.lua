@@ -24,4 +24,7 @@ end
 function dump(o)
 	wesnoth.message(dump_table(o))
 end
+
+
+
 -->>
