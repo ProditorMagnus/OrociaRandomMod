@@ -4,7 +4,7 @@
 	# intentionally not using << >> for code
 	# side is assumed 1 and given to function as such
 	[lua]
-		code=randomUnit({LEVEL},{X},{Y},1)
+		code=ORM_randomUnit({LEVEL},{X},{Y},1)
 	[/lua]
 #enddef
 

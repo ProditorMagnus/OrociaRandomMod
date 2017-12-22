@@ -284,15 +284,14 @@ Remove [chat] when upgrade fails
 4.10.6+dev
 Move unit spawn logic to Lua
 Use dedicated Lua files
-
-
+Labels of where next turn will spawn what level units
+Move allied tent to lua
+ORM_ prefix to global Lua variables
 
 
 4.x todo
 
-! must fix saves/replay with ultra
-
-Infinite waves with unit type names changed like http://files.wesnoth.org/addons/1.12/Better_Names.tar.bz2
+! test for broken saves/replay with ultra
 Create release only if ageless version changes
 Detect weaker factions
 Make zonk less powerful, temporary
@@ -302,7 +301,10 @@ Look if some bonuses needed for waves with divergence
 Consider if ronsmap items should be sidelocked - ron said that can be - to be implemented later
 Look xp setting too, but not very importantly
 If player uses red then make side 1 different color, gold, orange, white
-Rewrite ageless tent to compact lua
 Make stuff configurable during game, allow setting start value, and per wave increase, with 120 and 0.02 as initially, see what can be moved to Lua
 Persistent score database
 
+Plans that would be nice:
+allow player compose waves with menu
+upgrades visual marker
+infinite waves with unit type names changed like http://files.wesnoth.org/addons/1.12/Better_Names.tar.bz2
