@@ -287,6 +287,7 @@ Use dedicated Lua files
 Labels of where next turn will spawn what level units
 Move allied tent to lua
 ORM_ prefix to global Lua variables
+If player uses red then make side 1 different color, try gold, (orange?), white, green
 
 
 4.x todo
@@ -300,7 +301,6 @@ Make zonk less powerful, temporary
 Look if some bonuses needed for waves with divergence
 Consider if ronsmap items should be sidelocked - ron said that can be - to be implemented later
 Look xp setting too, but not very importantly
-If player uses red then make side 1 different color, gold, orange, white
 Make stuff configurable during game, allow setting start value, and per wave increase, with 120 and 0.02 as initially, see what can be moved to Lua
 Persistent score database
 
