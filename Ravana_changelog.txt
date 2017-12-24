@@ -289,10 +289,12 @@ Move allied tent to lua
 ORM_ prefix to global Lua variables
 If player uses red then make side 1 different color, try gold, (orange?), white, green
 Apply hardcore strong to attacks with 1 damage as well (0 still excluded)
+Swamp map
 
 4.x todo
 
 ! test for broken saves/replay with ultra
+! specials for swamp map, maybe extra poison power, lower resists
 Create release only if ageless version changes
 Detect weaker factions
 Make zonk less powerful, temporary
