@@ -281,7 +281,7 @@ Ultra hardcore turn 36 multipliers lowered: hp 40->15, damage 15->10, turn 40 hp
 4.10.6c
 Remove [chat] when upgrade fails
 
-4.10.6+dev
+4.10.7
 Move unit spawn logic to Lua
 Use dedicated Lua files
 Labels of where next turn will spawn what level units
@@ -291,10 +291,24 @@ If player uses red then make side 1 different color, try gold, (orange?), white,
 Apply hardcore strong to attacks with 1 damage as well (0 still excluded)
 Swamp map
 
+4.10.7a
+Fix swamp map destroyed village
+
+4.10.7b
+Fix swamp map extra upgrade spot
+
+
+4.10.7+dev
+
+
+
 4.x todo
 
 ! test for broken saves/replay with ultra
 ! specials for swamp map, maybe extra poison power, lower resists
+<22:54 FakeNews> i would love to see the map flood over time
+<23:17 FakeNews> i wish there was an armor to take
+Should Castle description affects swamp castle - change to swamp?
 Create release only if ageless version changes
 Detect weaker factions
 Make zonk less powerful, temporary
