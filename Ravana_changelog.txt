@@ -288,7 +288,7 @@ Labels of where next turn will spawn what level units
 Move allied tent to lua
 ORM_ prefix to global Lua variables
 If player uses red then make side 1 different color, try gold, (orange?), white, green
-
+Apply hardcore strong to attacks with 1 damage as well (0 still excluded)
 
 4.x todo
 
