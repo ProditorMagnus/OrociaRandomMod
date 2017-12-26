@@ -82,7 +82,9 @@ function ORM_updateSpawnLabels()
 	while ORM_waves["t"..next_wave] == nil do
 		next_wave = next_wave+1
 		if next_wave > 65536 then
-			helper.wml_error("ORM_updateSpawnLabels() finding next wave failed")
+			if wesnoth.current.turn ~= 46 then
+				helper.wml_error("ORM_updateSpawnLabels() finding next wave failed")
+			end
 			return
 		end
 	end

@@ -297,7 +297,7 @@ Fix swamp map destroyed village
 4.10.7b
 Fix swamp map extra upgrade spot
 
-4.10.7c
+4.10.7c, 4.10.7d
 Fix last wave label creation
 
 4.10.7c+dev
