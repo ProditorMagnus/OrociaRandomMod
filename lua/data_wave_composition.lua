@@ -255,7 +255,8 @@ ORM_waves = {
 		random_level=4,
 		original_type="Ancient Lich",
 		location=ORM_land_far_6
-	}}
+	}},
+	t46 = {}
 }
 
 ORM_wave_labels = {

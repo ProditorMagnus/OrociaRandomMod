@@ -79,7 +79,13 @@ function ORM_updateSpawnLabels()
 	end
 	
 	local next_wave = wesnoth.current.turn+1
-	while ORM_waves["t"..next_wave] == nil do next_wave = next_wave+1 end
+	while ORM_waves["t"..next_wave] == nil do
+		next_wave = next_wave+1
+		if next_wave > 65536 then
+			helper.wml_error("ORM_updateSpawnLabels() finding next wave failed")
+			return
+		end
+	end
 	local spawn_label_text = ORM_wave_labels["t"..next_wave][waveSetting]
 	
 	ORM_backport_label({

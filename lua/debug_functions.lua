@@ -22,7 +22,7 @@ function dump_table(o)
 end
 
 function dump(o)
-	wesnoth.message(dump_table(o))
+	wesnoth.message(dump_table(o)) -- try wml.tostring()
 end
 
 function add_wave(turn, wave)
