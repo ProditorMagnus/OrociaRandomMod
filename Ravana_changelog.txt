@@ -300,14 +300,17 @@ Fix swamp map extra upgrade spot
 4.10.7c, 4.10.7d
 Fix last wave label creation
 
-4.10.7c+dev
+4.10.7d+dev
 
 
 
 4.x todo
 
+! ORM table for globals not prefix
+! note that swamp map created by IPS
 ! test for broken saves/replay with ultra
-! specials for swamp map, maybe extra poison power, lower resists
+! specials for swamp map, maybe extra poison power, lower resists (insect swarm event)
+! re-add middle tree to swamp map
 <22:54 FakeNews> i would love to see the map flood over time
 <23:17 FakeNews> i wish there was an armor to take
 Should Castle description affects swamp castle - change to swamp?

@@ -1,265 +1,265 @@
 --<<
 -- turn name, and spawn groups
-ORM_waves = {
+ORM.waves = {
 	t1 = {{
 		random_level=0,
 		original_type="Naga Fighter",
-		location=ORM_water_6
+		location=ORM.loc.water_6
 	}},
 	t3 = {{
 		random_level=1,
 		original_type="Thug",
-		location=ORM_land_near_6
+		location=ORM.loc.land_near_6
 	},
 	{
 		random_level=0,
 		original_type="Peasant",
-		location=ORM_land_far_9
+		location=ORM.loc.land_far_9
 	}},
 	t5 = {{
 		random_level=1,
 		original_type="Ghost",
-		location=ORM_water_6
+		location=ORM.loc.water_6
 	}},
 	t6 = {{
 		random_level=0,
 		original_type="Walking Corpse",
-		location=ORM_land_near_6
+		location=ORM.loc.land_near_6
 	},
 	{
 		random_level=0,
 		original_type="Walking Corpse",
-		location=ORM_land_far_3
+		location=ORM.loc.land_far_3
 	}},
 	t9 = {{
 		random_level=1,
 		original_type="Mage",
-		location=ORM_land_far_3
+		location=ORM.loc.land_far_3
 	},
 	{
 		random_level=1,
 		original_type="Spearman",
-		location=ORM_land_far_6
+		location=ORM.loc.land_far_6
 	},
 	{
 		random_level=1,
 		original_type="Cavalryman",
-		location=ORM_land_near_6
+		location=ORM.loc.land_near_6
 	}},
 	t12 = {{
 		random_level=1,
 		original_type="Orcish Archer",
-		location=ORM_land_far_6
+		location=ORM.loc.land_far_6
 	},
 	{
 		random_level=2,
 		original_type="Troll",
-		location=ORM_land_near_3
+		location=ORM.loc.land_near_3
 	},
 	{
 		random_level=1,
 		original_type="Wolf Rider",
-		location=ORM_land_near_6
+		location=ORM.loc.land_near_6
 	}},
 	t15 = {{
 		random_level=2,
 		original_type="Elvish Captain",
-		location=ORM_land_far_3
+		location=ORM.loc.land_far_3
 	},
 	{
 		random_level=1,
 		original_type="Elvish Archer",
-		location=ORM_land_far_6
+		location=ORM.loc.land_far_6
 	},
 	{
 		random_level=1,
 		original_type="Wose",
-		location=ORM_land_near_6
+		location=ORM.loc.land_near_6
 	},
 	{
 		random_level=1,
 		original_type="Merman Hunter",
-		location=ORM_water_6
+		location=ORM.loc.water_6
 	}},
 	t19 = {{
 		random_level=1,
 		original_type="Young Ogre",
-		location=ORM_land_near_9
+		location=ORM.loc.land_near_9
 	},
 	{
 		random_level=2,
 		original_type="Ogre",
-		location=ORM_land_far_6
+		location=ORM.loc.land_far_6
 	},
 	{
 		random_level=2,
 		original_type="Merman Netcaster",
-		location=ORM_water_3
+		location=ORM.loc.water_3
 	}},
 	t21 = {{
 		random_level=1,
 		original_type="Blood Bat",
-		location=ORM_water_6
+		location=ORM.loc.water_6
 	},
 	{
 		random_level=0,
 		original_type="Vampire Bat",
-		location=ORM_land_near_9
+		location=ORM.loc.land_near_9
 	},
 	{
 		random_level=2,
 		original_type="Shadow",
-		location=ORM_land_far_6
+		location=ORM.loc.land_far_6
 	}},
 	t24 = {{
 		random_level=1,
 		original_type="Drake Fighter",
-		location=ORM_land_near_6
+		location=ORM.loc.land_near_6
 	},
 	{
 		random_level=2,
 		original_type="Drake Warrior",
-		location=ORM_land_far_3
+		location=ORM.loc.land_far_3
 	},
 	{
 		random_level=1,
 		original_type="Drake Clasher",
-		location=ORM_land_far_6
+		location=ORM.loc.land_far_6
 	},
 	{
 		random_level=1,
 		original_type="Drake Burner",
-		location=ORM_water_6
+		location=ORM.loc.water_6
 	}},
 	t28 = {{
 		random_level=1,
 		original_type="Gryphon Rider",
-		location=ORM_water_6
+		location=ORM.loc.water_6
 	},
 	{
 		random_level=2,
 		original_type="Dwarvish Berserker",
-		location=ORM_land_far_6
+		location=ORM.loc.land_far_6
 	},
 	{
 		random_level=2,
 		original_type="Dwarvish Thunderguard",
-		location=ORM_land_near_6
+		location=ORM.loc.land_near_6
 	}},
 	t31 = {{
 		random_level=2,
 		original_type="Knight",
-		location=ORM_land_far_6
+		location=ORM.loc.land_far_6
 	},
 	{
 		random_level=3,
 		original_type="Paladin",
-		location=ORM_land_far_3
+		location=ORM.loc.land_far_3
 	},
 	{
 		random_level=2,
 		original_type="Lancer",
-		location=ORM_land_near_6
+		location=ORM.loc.land_near_6
 	}},
 	t33 = {{
 		random_level=2,
 		original_type="Red Mage",
-		location=ORM_land_far_9
+		location=ORM.loc.land_far_9
 	},
 	{
 		random_level=2,
 		original_type="Dark Sorcerer",
-		location=ORM_land_near_6
+		location=ORM.loc.land_near_6
 	},
 	{
 		random_level=3,
 		original_type="Silver Mage",
-		location=ORM_land_near_3
+		location=ORM.loc.land_near_3
 	}},
 	t36 = {{
 		random_level=1,
 		original_type="Saurian Skirmisher",
-		location=ORM_water_6
+		location=ORM.loc.water_6
 	},
 	{
 		random_level=2,
 		original_type="Saurian Ambusher",
-		location=ORM_land_near_9
+		location=ORM.loc.land_near_9
 	},
 	{
 		random_level=2,
 		original_type="Saurian Soothsayer",
-		location=ORM_land_near_6
+		location=ORM.loc.land_near_6
 	},
 	{
 		random_level=2,
 		original_type="Saurian Oracle",
-		location=ORM_land_near_3
+		location=ORM.loc.land_near_3
 	},
 	{
 		random_level=2,
 		original_type="Saurian Oracle",
-		location=ORM_land_far_3
+		location=ORM.loc.land_far_3
 	},
 	{
 		random_level=2,
 		original_type="Saurian Soothsayer",
-		location=ORM_land_far_6
+		location=ORM.loc.land_far_6
 	},
 	{
 		random_level=2,
 		original_type="Saurian Ambusher",
-		location=ORM_land_far_9
+		location=ORM.loc.land_far_9
 	}},
 	t38 = {{
 		random_level=2,
 		original_type="Orcish Slayer",
-		location=ORM_land_near_3
+		location=ORM.loc.land_near_3
 	},
 	{
 		random_level=2,
 		original_type="Orcish Slayer",
-		location=ORM_land_near_6
+		location=ORM.loc.land_near_6
 	},
 	{
 		random_level=2,
 		original_type="Orcish Slayer",
-		location=ORM_land_near_9
+		location=ORM.loc.land_near_9
 	},
 	{
 		random_level=3,
 		original_type="Assassin",
-		location=ORM_land_far_3
+		location=ORM.loc.land_far_3
 	},
 	{
 		random_level=3,
 		original_type="Assassin",
-		location=ORM_land_far_6
+		location=ORM.loc.land_far_6
 	},
 	{
 		random_level=3,
 		original_type="Assassin",
-		location=ORM_land_far_9
+		location=ORM.loc.land_far_9
 	}},
 	t40 = {{
 		random_level=4,
 		original_type="Yeti",
-		location=ORM_land_far_3
+		location=ORM.loc.land_far_3
 	},
 	{
 		random_level=4,
 		original_type="Yeti",
-		location=ORM_land_far_9
+		location=ORM.loc.land_far_9
 	},
 	{
 		random_level=4,
 		original_type="Ancient Lich",
-		location=ORM_land_far_6
+		location=ORM.loc.land_far_6
 	}},
 	t46 = {}
 }
 
-ORM_wave_labels = {
+ORM.wave_labels = {
 	t3 = {
 		ageless_random_full = "Wave 2",
 		ageless_random_mirrored = "Wave 2",

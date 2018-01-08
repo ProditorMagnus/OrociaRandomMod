@@ -1,5 +1,5 @@
 --<<
-function ORM_setSuitableEnemyColor()
+function ORM.fun.set_suitable_enemy_color()
 	local seenRed = false
 	local seenGold = false
 	local seenWhite = false
