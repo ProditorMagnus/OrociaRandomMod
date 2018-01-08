@@ -311,6 +311,7 @@ Fix last wave label creation
 ! test for broken saves/replay with ultra
 ! specials for swamp map, maybe extra poison power, lower resists (insect swarm event)
 ! re-add middle tree to swamp map
+handle https://forums.wesnoth.org/viewtopic.php?f=15&t=47710&p=621891#p621703
 <22:54 FakeNews> i would love to see the map flood over time
 <23:17 FakeNews> i wish there was an armor to take
 Should Castle description affects swamp castle - change to swamp?

@@ -34,7 +34,7 @@ function ORM.fun.set_suitable_enemy_color()
 				wesnoth.wml_actions.modify_side { side=1, flag="flags/flag-[1~4].png:250~RC(magenta>8)", }
 			end
 		else
-			if wesnoth.get_variable "Rav_Color_Yellow" then
+			if V.Rav_Color_Yellow then
 				wesnoth.sides[1].color = "Rav_yellow"
 				-- TODO 1.13.7 can write to flag
 				wesnoth.wml_actions.modify_side { side=1, flag="flags/flag-[1~4].png:250~RC(magenta>Rav_yellow)", }

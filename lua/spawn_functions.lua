@@ -1,22 +1,38 @@
 --<<
 function ORM.fun.random_unit(level,x,y,side)
+	if level == nil then error("Level is nil") end
 	-- TODO 1.13 use wesnoth.random
 	wesnoth.fire("set_variable", { name = "LUA_random", rand = string.format("%d..%d", 1, #level) })
-	local unitid = level[wesnoth.get_variable "LUA_random"]
-	wesnoth.set_variable "LUA_random"
-	wesnoth.fire("unit", { type = unitid, placement = "map_passable", x = x, y = y, side = side })
-	wesnoth.fire("set_variable", { name = "ORM_last_unit", value = unitid })
+	local unitid = level[V.LUA_random]
+	V.LUA_random = nil
+	-- wesnoth.fire("unit", { type = unitid, placement = "map_passable", x = x, y = y, side = side })
+	ORM.fun.spawn_unit(unitid, x, y, side)
+	-- wesnoth.fire("set_variable", { name = "ORM_last_unit", value = unitid })
+	V.ORM_last_unit = unitid
 end
 
 function ORM.fun.previous_unit(level,x,y,side)
-	local unitid = wesnoth.get_variable "ORM_last_unit"
-	wesnoth.fire("unit", { type = unitid, placement = "map_passable", x = x, y = y, side = side })
+	local unitid = V.ORM_last_unit
+	-- wesnoth.fire("unit", { type = unitid, placement = "map_passable", x = x, y = y, side = side })
+	ORM.fun.spawn_unit(unitid, x, y, side)
 end
 
+function ORM.fun.spawn_unit(type, x, y, side)
+	-- TODO https://github.com/wesnoth/wesnoth/issues/2358
+	-- local u = wesnoth.create_unit({
+		-- type=type,
+		-- x=x,
+		-- y=y,
+		-- side=side,
+		-- placement="map_passable" -- not possible in Lua it seems
+	-- })
+	-- wesnoth.put_unit(u)
+	wesnoth.fire("unit", { type = type, placement = "map_passable", x = x, y = y, side = side })
+end
 
 function ORM.fun.spawn_unit_set(level, location, original_type)
 	local ai_side = 1
-	local waveSetting = wesnoth.get_variable "ORM_wave_choice_setting"
+	local waveSetting = V.ORM_wave_choice_setting
 	
 	if ORM.unit.level[level] == nil then
 		helper.wml_error("ORM.fun.spawn_unit_set","level "..level.." not implemented")
@@ -39,7 +55,8 @@ function ORM.fun.spawn_unit_set(level, location, original_type)
 	end
 	if waveSetting == "core_predefined" then
 		for i,loc in ipairs(location) do
-			wesnoth.fire("unit", { type = original_type, placement = "map_passable", x = loc.x, y = loc.y, side = ai_side })
+			-- wesnoth.fire("unit", { type = original_type, placement = "map_passable", x = loc.x, y = loc.y, side = ai_side })
+			ORM.fun.spawn_unit(original_type, loc.x, loc.y, ai_side)
 		end
 	end
 end
@@ -51,6 +68,14 @@ function ORM.fun.spawn_wave()
 			ORM.fun.spawn_unit_set(v.random_level, v.location, v.original_type)
 		end
 		ORM.fun.update_spawn_labels()
+		ORM.fun.apply_wave_modifications()
+	end
+end
+
+function ORM.fun.apply_wave_modifications()
+	local units = wesnoth.get_units { side = 1 }
+	for i, u in ipairs(units) do
+		wesnoth.add_modification(u, "trait", ORM.bonus.strong(0))
 	end
 end
 
@@ -60,7 +85,7 @@ function ORM.fun.backport_label(cfg)
 end
 
 function ORM.fun.update_spawn_labels()
-	local waveSetting = wesnoth.get_variable "ORM_wave_choice_setting"
+	local waveSetting = V.ORM_wave_choice_setting
 
 	-- remove labels after spawning
 	if ORM.waves["t"..wesnoth.current.turn] ~= nil then
@@ -107,7 +132,7 @@ function ORM.fun.update_spawn_labels()
 
 	for i,v in ipairs(ORM.waves["t"..next_wave]) do
 		for j,loc in ipairs(v.location) do
-			local waveSetting = wesnoth.get_variable "ORM_wave_choice_setting"
+			local waveSetting = V.ORM_wave_choice_setting
 			local label_text = "Unhandled waveSetting "..waveSetting..", report"
 			if waveSetting == "ageless_random_full" then
 				label_text = "Level "..v.random_level
