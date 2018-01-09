@@ -301,8 +301,10 @@ Fix swamp map extra upgrade spot
 Fix last wave label creation
 
 4.10.7d+dev
-
-
+Move wave bonuses to Lua
+Apply adaptive rating to magical, backstab, charge
+Few more changes to wave bonuses
+Move ultrahardcore strong from turns 8, 11, 14, 18 to 7, 10, 13, 17
 
 4.x todo
 

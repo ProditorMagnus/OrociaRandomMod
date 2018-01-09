@@ -62,21 +62,36 @@ function ORM.fun.spawn_unit_set(level, location, original_type)
 end
 
 function ORM.fun.spawn_wave()
-	if ORM.waves["t"..wesnoth.current.turn] == nil then
-	else
+	if ORM.waves["t"..wesnoth.current.turn] ~= nil then
 		for i,v in ipairs(ORM.waves["t"..wesnoth.current.turn]) do
 			ORM.fun.spawn_unit_set(v.random_level, v.location, v.original_type)
 		end
 		ORM.fun.update_spawn_labels()
-		ORM.fun.apply_wave_modifications()
 	end
+	ORM.fun.apply_wave_modifications()
 end
 
 function ORM.fun.apply_wave_modifications()
+	if ORM.unit_bonuses["t"..wesnoth.current.turn] == nil then return end
+
+	local difficulty = V.ORM_difficulty_mode
+	-- TODO if core waves and normal or hardcore, then use difficulty=predefined
+	if V.ORM_wave_choice_setting == "core_predefined" and (difficulty == "normal" or difficulty=="hardcore") then difficulty = "predefined" end
+	local bonus = ORM.unit_bonuses["t"..wesnoth.current.turn][difficulty]
 	local units = wesnoth.get_units { side = 1 }
-	for i, u in ipairs(units) do
-		wesnoth.add_modification(u, "trait", ORM.bonus.strong(0))
+	if bonus == nil then return	end
+	for i,u in ipairs(units) do
+		if bonus.name == nil then
+			for j,b in ipairs(bonus) do
+				wesnoth.add_modification(u, "trait", ORM.bonus.evaluate(b))	
+			end
+		else
+			wesnoth.add_modification(u, "trait", ORM.bonus.evaluate(bonus))
+		end
 	end
+	-- for i, u in ipairs(units) do
+		-- wesnoth.add_modification(u, "trait", ORM.bonus.strong(0))
+	-- end
 end
 
 function ORM.fun.backport_label(cfg)
@@ -104,10 +119,11 @@ function ORM.fun.update_spawn_labels()
 	end
 	
 	local next_wave = wesnoth.current.turn+1
+	local wave_trial_limit = next_wave + 10
 	while ORM.waves["t"..next_wave] == nil do
 		next_wave = next_wave+1
-		if next_wave > 65536 then
-			if wesnoth.current.turn ~= 46 then
+		if next_wave > wave_trial_limit then
+			if wesnoth.current.turn ~= ORM.win_turn then
 				helper.wml_error("ORM.fun.update_spawn_labels() finding next wave failed")
 			end
 			return

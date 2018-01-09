@@ -342,4 +342,119 @@ ORM.wave_labels = {
 	}
 }
 
+-- TODO add core_predefined bonuses
+ORM.unit_bonuses = {
+	-- t1 = {
+		-- ultrahardcore=ORM.bonus.build("__tmp__",{ORM.effect.add_backstab(1.7)})
+		-- ultrahardcore=ORM.bonus.build("__tmp__",{ORM.effect.add_charge(5)})
+		-- ultrahardcore=ORM.bonus.build("__tmp__",{ORM.effect.add_magical(70)})
+		-- ultrahardcore=ORM.bonus.build("__tmp__",{ORM.effect.add_skirmish()})
+	-- },
+	-- t1 = {
+		-- ultrahardcore=ORM.bonus.swift(-90, 10)
+	-- },
+	-- t2 = {
+		-- ultrahardcore=ORM.bonus.strong(1)
+	-- },
+	t4 = {
+		easy=ORM.bonus.weak(1),
+		normal=ORM.bonus.weak(1),
+		hardcore={},
+		ultrahardcore=ORM.bonus.strong(1)
+	},
+	t7 = {
+		easy={},
+		normal={},
+		hardcore={},
+		ultrahardcore=ORM.bonus.strong(1)
+	},
+	t8 = {
+		easy=ORM.bonus.weak(1),
+		normal=ORM.bonus.weak(1),
+		hardcore={},
+		ultrahardcore={}
+	},
+	t10 = {
+		easy={},
+		normal={},
+		hardcore={},
+		ultrahardcore=ORM.bonus.strong(1)
+	},
+	t11 = {
+		easy=ORM.bonus.weak(1),
+		normal=ORM.bonus.weak(1),
+		hardcore={},
+		ultrahardcore={}
+	},
+	t13 = {
+		easy={},
+		normal={},
+		hardcore={},
+		ultrahardcore=ORM.bonus.strong(1)
+	},
+	t14 = {
+		easy=ORM.bonus.weak(1),
+		normal=ORM.bonus.weak(1),
+		hardcore={},
+		ultrahardcore=ORM.bonus.strong(1)
+	},
+	t17 = {
+		easy={},
+		normal={},
+		hardcore={},
+		ultrahardcore=ORM.bonus.strong(1)
+	},
+	t18 = {
+		easy=ORM.bonus.weak(1),
+		normal=ORM.bonus.weak(1),
+		hardcore={},
+		ultrahardcore=ORM.bonus.strong(1)
+	},
+	t21 = {
+		normal=ORM.bonus.swift(34,25),
+		hardcore=ORM.bonus.swift(34,25),
+		ultrahardcore=ORM.bonus.swift(34,25)
+	},
+	t24 = {
+		normal=ORM.bonus.mighty(-17,50),
+		hardcore=ORM.bonus.mighty(-17,50),
+		ultrahardcore=ORM.bonus.mighty(-17,50)
+	},
+	t28 = {
+		normal=ORM.bonus.bulky(30,10),
+		hardcore=ORM.bonus.bulky(30,10),
+		ultrahardcore=ORM.bonus.bulky(30,10)
+	},
+	t31 = {
+		predefined=ORM.bonus.swift(10,20),
+		normal=ORM.bonus.charge(2),
+		hardcore=ORM.bonus.charge(2),
+		ultrahardcore={ORM.bonus.charge(2),ORM.bonus.swift(40,30)}
+	},
+	t33 = {
+		predefined=ORM.bonus.bulky(10,20),
+		normal=ORM.bonus.magical(70),
+		hardcore=ORM.bonus.magical(70),
+		ultrahardcore={ORM.bonus.magical(70),ORM.bonus.mighty(-10,60)}
+	},
+	t36 = {
+		predefined=ORM.bonus.mighty(10,15),
+		normal=ORM.bonus.skirmish(),
+		hardcore=ORM.bonus.skirmish(),
+		ultrahardcore={ORM.bonus.skirmish(),ORM.bonus.bulky(15,10)}
+	},
+	t38 = {
+		predefined=ORM.bonus.deadly(10),
+		normal=ORM.bonus.backstab(1.7),
+		hardcore=ORM.bonus.backstab(1.7),
+		ultrahardcore={ORM.bonus.backstab(1.7),ORM.bonus.deadly(10)}
+	},
+	t40 = {
+		predefined={ORM.bonus.undead(),ORM.bonus.powerful(20,20)},
+		normal=ORM.bonus.undead(),
+		hardcore=ORM.bonus.undead(),
+		ultrahardcore={ORM.bonus.undead(),ORM.bonus.powerful(10, 30)}
+	}
+}
+
 -->>
