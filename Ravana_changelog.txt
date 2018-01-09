@@ -300,7 +300,7 @@ Fix swamp map extra upgrade spot
 4.10.7c, 4.10.7d
 Fix last wave label creation
 
-4.10.7d+dev
+4.10.8
 Move wave bonuses to Lua
 Apply adaptive rating to magical, backstab, charge
 Few more changes to wave bonuses
