@@ -27,8 +27,8 @@ function ORM.fun.init_adaptive_difficulty()
 	if (c) then
 		result = result + 0.15
 	end
-	local c = V.ORM_agelesswaves_random_setting
-	if (c == "ORM_bool_true") then
+	local c = V.ORM_random_ageless_waves
+	if (c) then
 		result = result - 0.5
 	end
 	local c = V.ORM_wave_choice_setting
@@ -39,7 +39,7 @@ function ORM.fun.init_adaptive_difficulty()
 	if (c) then
 		result = result + 0.2 + c/10
 	end
-	if (V.ORM_tenthealer_setting == "ORM_bool_true" and V.ORM_alliedtent_setting == "ORM_bool_true") then
+	if (V.ORM_tenthealer_setting and V.ORM_alliedtent_setting) then
 		result = result + 0.05
 	end
 	local c = V.ORM_map_setting
@@ -52,7 +52,7 @@ function ORM.fun.init_adaptive_difficulty()
 
 	if (wesnoth.game_config.mp_settings.mp_era == "era_default" or wesnoth.game_config.mp_settings.mp_era == "era_heroes" or wesnoth.game_config.mp_settings.mp_era == "era_khalifate" or wesnoth.game_config.mp_settings.mp_era == "era_khalifate_heroes") then
 		result = result - 0.4
-		if (V.ORM_agelesswaves_random_setting == "ORM_bool_true") then
+		if (V.ORM_random_ageless_waves) then
 			result = result - 0.2
 		end
 	end
@@ -61,7 +61,7 @@ function ORM.fun.init_adaptive_difficulty()
 	result = math.floor(result)
 	result = result/100.0
 
-	if ((V.ORM_adaptive_difficulty == "ORM_bool_true" and V.ORM_difficulty_mode == "hardcore") or (V.ORM_adaptive_difficulty == "ORM_bool_true" and V.ORM_difficulty_mode == "ultrahardcore")) then
+	if ((V.ORM_adaptive_difficulty and V.ORM_difficulty_mode == "hardcore") or (V.ORM_adaptive_difficulty and V.ORM_difficulty_mode == "ultrahardcore")) then
 		wesnoth.message("Adaptive difficulty rating calculated: "..result..", adding together with base-> "..V.ORM_difficulty_setting+result)
 		V.ORM_difficulty_setting = V.ORM_difficulty_setting+result
 	end

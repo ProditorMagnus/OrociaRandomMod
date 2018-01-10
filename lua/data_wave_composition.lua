@@ -342,7 +342,6 @@ ORM.wave_labels = {
 	}
 }
 
--- TODO add core_predefined bonuses
 ORM.unit_bonuses = {
 	-- t1 = {
 		-- ultrahardcore=ORM.bonus.build("__tmp__",{ORM.effect.add_backstab(1.7)})

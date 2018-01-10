@@ -43,14 +43,6 @@ function ORM.debug.wrap(str, limit, indent, indent1)
                           end)
 end
 
-function ORM.debug.table_contains(t, v)
-    for key, value in pairs(t) do
-		-- dump("table contains "..value)
-        if value == v then return true end
-    end
-    return false
-end
-
 function add_wave(turn, wave)
 	-- local wave = {}
 	-- function add_spawn(number, location, level)
@@ -113,7 +105,7 @@ function ORM.debug.inspect_table(t, path)
 		k = v
 		v=t[v]
 		if type(v)=="table" then
-			if ORM.debug.table_contains(excluded, k) then else
+			if ORM.fun.table_contains(excluded, k) then else
 				-- wesnoth.message("there is table",k)
 				table.insert(options, k)
 			end

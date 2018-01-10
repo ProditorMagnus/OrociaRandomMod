@@ -2,7 +2,7 @@
 -- TODO allow adding description to trait
 function ORM.bonus.evaluate(bonus)
 	local name = bonus.name
-	bonus = ORM.fun.map(function(e) return e() end, bonus)
+	local bonus = ORM.fun.map(function(e) return e() end, bonus)
 	bonus.name = name
 	-- inspect(bonus)
 	return bonus
@@ -13,10 +13,18 @@ function ORM.bonus.get(bonus)
 	local name = bonus.name
 	local adr = V.ORM_difficulty_setting
 	V.ORM_difficulty_setting = 1
-	bonus = ORM.fun.map(function(e) return e() end, bonus)
+	local bonus = ORM.fun.map(function(e) return e() end, bonus)
 	V.ORM_difficulty_setting = adr
 	bonus.name = name
 	return bonus
+end
+
+function ORM.effect.get(effect)
+	local adr = V.ORM_difficulty_setting
+	V.ORM_difficulty_setting = 1
+	local e = effect()
+	V.ORM_difficulty_setting = adr
+	return e
 end
 
 -- Usable for building trait that includes multiple bonuses
@@ -236,7 +244,7 @@ function ORM.effect.add_magical(cth_modifier)
 				T.chance_to_hit({
 					id="magical",
 					name="magical "..tostring(cth_modifier),
-					description="This attack always has a fixed chance to hit regardless of the defensive ability of the unit being attacked.. Chance: "..tostring(cth_modifier),
+					description="This attack always has a fixed chance to hit regardless of the defensive ability of the unit being attacked. Chance: "..tostring(cth_modifier),
 					value=cth_modifier,
 					cumulative="no"
 				})

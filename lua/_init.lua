@@ -10,6 +10,8 @@ ORM.fun = {}
 ORM.bonus = {}
 ORM.effect = {}
 ORM.debug = {}
+ORM.event = {}
+ORM.event.once = {}
 
 ORM.win_turn = 46
 

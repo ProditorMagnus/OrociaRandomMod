@@ -95,6 +95,8 @@ function ORM.fun.apply_wave_modifications()
 end
 
 function ORM.fun.backport_label(cfg)
+	cfg.visible_in_fog = true
+	cfg.visible_in_shroud = true
 	-- TODO 1.13 remove in favor of wesnoth.label()
 	wesnoth.fire("label", { x = cfg.x, y = cfg.y, text = cfg.text, color = cfg.color, visible_in_fog = cfg.visible_in_fog, visible_in_shroud = cfg.visible_in_shroud, immutable = cfg.immutable })
 end
