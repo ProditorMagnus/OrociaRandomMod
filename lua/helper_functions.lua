@@ -128,6 +128,7 @@ function ORM.fun.apply_rush_mod()
 end
 
 function ORM.fun.initialise_difficulty_modes()
+	V.ORM_hpmultiplier_setting = 0
 	local switch = {
 		ultrahardcore = function()
 			V.ORM_hpmultiplier_setting =  V.ORM_hpmultiplier_setting + 1.1
