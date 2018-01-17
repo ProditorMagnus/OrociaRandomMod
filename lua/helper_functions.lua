@@ -118,12 +118,16 @@ function ORM.fun.apply_rush_mod()
 			}
 		}
 
+		local message = ""
 		for i,u in ipairs(units) do
 			wesnoth.add_modification(u, "object", {
 				ORM.effect.get(ORM.effect.add_status("ORM_rush_mod"))
 			})
-			u.moves = u.moves * movement_modifier
+			message = message .. "unit "..tostring(u.x)..", "..tostring(u.y).." with moves "..tostring(u.moves).." multiplied with "..tostring(movement_modifier).." giving "..tostring(u.moves * movement_modifier) .. " -> "
+			-- u.moves = u.moves * movement_modifier -- TODO re-add
+			message = message .. tostring(u.moves) .. "\n"
 		end
+		wesnoth.message("ORM debug", message)
 	end
 end
 

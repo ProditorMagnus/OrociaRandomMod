@@ -107,7 +107,7 @@ function ORM.effect.increase_damage(damage)
 	return function()
 		return T.effect{
 			apply_to = "attack",
-			damage="1-999", -- TODO decide if it would be better to allow adding damage to unit with 0 damage
+			damage="1-999", -- TODO decide if it would be better to allow adding damage to unit with 0 damage, do not weaken 1-damage attacks
 			increase_damage=damage
 		}
 	end
