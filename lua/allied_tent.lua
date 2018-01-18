@@ -25,7 +25,7 @@ end
 function ORM.fun.on_allied_tent_move(x, y)
 	local items = wesnoth.require "lua/wml/items.lua"
 	items.remove(x, y, "scenery/tent-fancy-red.png")
-	
+
 	if V.ORM_agelessunits_available then
 		if V.ORM_tenthealer_setting then
 			ORM.fun.random_unit(ORM.unit.level_two_healer,x,y,wesnoth.current.side)

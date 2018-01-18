@@ -120,14 +120,20 @@ function ORM.fun.apply_rush_mod()
 
 		local message = ""
 		for i,u in ipairs(units) do
+			local old_moves = u.moves
 			wesnoth.add_modification(u, "object", {
 				ORM.effect.get(ORM.effect.add_status("ORM_rush_mod"))
 			})
 			message = message .. "unit "..tostring(u.x)..", "..tostring(u.y).." with moves "..tostring(u.moves).." multiplied with "..tostring(movement_modifier).." giving "..tostring(u.moves * movement_modifier) .. " -> "
-			-- u.moves = u.moves * movement_modifier -- TODO re-add
+			u.moves = u.moves * movement_modifier
 			message = message .. tostring(u.moves) .. "\n"
+			if old_moves > 3.5 and movement_modifier > 1.29 and u.moves == old_moves then
+				wesnoth.message("ORM debug", message)
+				wesnoth.message("ORM error","Movement change not applied correctly! Report to Ravana")
+			end
+			u.moves = old_moves -- TODO re-add if no more oos
 		end
-		wesnoth.message("ORM debug", message)
+		-- wesnoth.message("ORM debug", message) -- TODO replicate it in small scenario
 	end
 end
 

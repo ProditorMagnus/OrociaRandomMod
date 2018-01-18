@@ -20,14 +20,14 @@ end
 
 function ORM.event.start()
 	V.Rav_DBG_1 = true -- AI side, so able to undroid it and use commands
-	
+
 	if V.ORM_hpmultiplier_setting == nil then V.ORM_hpmultiplier_setting = 0 end
 	V.ORM_hpmultiplier_setting = V.ORM_hpmultiplier_setting * 0.01
-	
+
 	V.ORM_random_ageless_waves = ORM.fun.table_contains({"ageless_random_full", "ageless_random_mirrored"}, V.ORM_wave_choice_setting)
-	
+
 	V.ORM_agelessunits_available = wesnoth.game_config.mp_settings.mp_era:find("Ageless") or V.ORM_wave_choice_setting:find("ageless")
-	
+
 	ORM.fun.remove_turn_limit()
 	ORM.fun.initialise_difficulty_modes()
 end

@@ -320,6 +320,10 @@ Fix hp multiplier
 4.10.9b
 Use game config era instead of era_id variable
 Add debug message to help debug rush mod oos, and disable mp change until oos cause is found
+Add warning message when retrieving nonexisting wml variable when developing
+
+4.10.9c
+Show debug message only if error is detected
 
 4.10.?
 TODO Swamp map 14,12 to healing spot, for example oasis

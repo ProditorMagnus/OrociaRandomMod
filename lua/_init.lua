@@ -15,7 +15,7 @@ ORM.event.once = {}
 
 ORM.win_turn = 46
 
-V = helper.set_wml_var_metatable {} -- TODO add warning message when retrieving nonexisting
+V = helper.set_wml_var_metatable {}
 
 function Ravana()
 	return type(AE_condition_use_beta_features) == "function" and AE_condition_use_beta_features()
