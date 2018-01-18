@@ -326,7 +326,7 @@ Add warning message when retrieving nonexisting wml variable when developing
 Show debug message only if error is detected
 
 4.10.?
-TODO Swamp map 14,12 to healing spot, for example oasis
+Swamp map 14,12 to healing spot, for example oasis
 
 
 4.x todo
