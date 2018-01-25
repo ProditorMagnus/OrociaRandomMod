@@ -325,11 +325,17 @@ Add warning message when retrieving nonexisting wml variable when developing
 4.10.9c
 Show debug message only if error is detected
 
-4.10.?
+4.10.9d
 Swamp map 14,12 to healing spot, for example oasis
+
+4.10.9e
+Fix normal wave upgrades for turn 30+
+Rush mod moved back to WML
+Added debug functions that are called on ageless unsynced menu
 
 
 4.x todo
+! overlay for units showing upgrades
 Pagawan is my big fan, I should play with him
 ! test for broken saves/replay with ultra
 ! specials for swamp map, maybe extra poison power, lower resists (insect swarm event)

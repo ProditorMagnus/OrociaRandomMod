@@ -28,6 +28,42 @@ function dump(o)
 	wesnoth.message(ORM.debug.dump_table(o, 1)) -- try wml.tostring()
 end
 
+function ORM.debug.log(o)
+	if type(o) == "table" then
+		o = ORM.debug.dump_table(o, 9)
+	end
+	if type(o) == "function" then
+		o = tostring(o)
+	end
+	if type(o) == "number" then
+		o = tostring(o)
+	end
+	if type(o) == "string" then
+		debug_log = helper.get_variable_array("ORM_debug_log")
+		if debug_log == nil then debug_log = {} end
+		table.insert(debug_log, {value=o})
+		helper.set_variable_array("ORM_debug_log", debug_log)
+		ORM.debug.debug_log = {}
+		for i,v in ipairs(debug_log) do
+			table.insert(ORM.debug.debug_log, v.value)
+		end
+	end
+	if type(Ravana) ~= "function" or not Ravana() then return end
+
+	wesnoth.message("ORM.debug.log", o)
+end
+
+function ORM.debug.show_log()
+	if type(Ravana) ~= "function" or not Ravana() then return end
+	inspect(helper.get_variable_array("ORM_debug_log"))
+end
+
+function AE_beta_ORM_debug()
+	if type(Ravana) ~= "function" or not Ravana() then return end
+	ORM.debug.inspect_table(_G, {})
+	wesnoth.wml_actions.inspect{}
+end
+
 -- http://lua-users.org/wiki/StringRecipes
 function ORM.debug.wrap(str, limit, indent, indent1)
   indent = indent or ""
@@ -42,34 +78,6 @@ function ORM.debug.wrap(str, limit, indent, indent1)
                             end
                           end)
 end
-
-function add_wave(turn, wave)
-	-- local wave = {}
-	-- function add_spawn(number, location, level)
-		-- local spawn_location = location.."_"..number
-		-- if _G[spawn_location] == nil then
-			-- helper.wml_error("add_wave called with location and number that do not define spawn location, allowed water, land_near, land_far with amounts 3,6,9; without 9 at water")
-		-- end
-		-- return {
-			-- random_level=0,
-			-- original_type="No original type defined",
-			-- location=_G[spawn_location]
-		-- }
-	-- end
-	-- for i,v in ipairs(data) do
-
-	-- end
-	ORM.waves["t"..turn] = wave
-end
-
--- add_wave(2, {{
-	-- random_level=4,
-	-- location=ORM.loc.land_near_3
--- },
--- {
-	-- random_level=3,
-	-- location=ORM.loc.water_3
--- }})
 
 function DBG()
 	ORM.debug.inspect_table(_G, {})
@@ -181,7 +189,7 @@ function ORM.debug.inspect_table(t, path)
 	-- dump(li)
 	if r == -1 and li ~= 0 then
 		local child_name = options[li]
-		dump("inspect called on "..child_name)
+		-- dump("inspect called on "..child_name)
 		local child = t[child_name]
 		
 		if type(child) == "table" then

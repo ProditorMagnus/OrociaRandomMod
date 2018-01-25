@@ -97,67 +97,68 @@ function ORM.fun.apply_hpmultiplier()
 end
 
 function ORM.fun.apply_rush_mod()
-	if wesnoth.game_config.mp_settings.active_mods:find("EXI_Rush_Mod") then
-		local movement_modifier
-		if V.ORM_castledestruction_setting then
-			movement_modifier = 1.3
-		else
-			movement_modifier = 1.8
-		end
-		if wesnoth.current.turn <= 1 then
-			movement_modifier = 1
-		end
-		local units = wesnoth.get_units{
-			side = 1,
-			T["not"]{
-				T.filter_wml{
-					T.status{
-						ORM_rush_mod="yes"
-					}
-				}
-			}
-		}
+	return -- TODO would cause OOS if applied from Lua in 1.12
+	-- if wesnoth.game_config.mp_settings.active_mods:find("EXI_Rush_Mod") then
+		-- local movement_modifier
+		-- if V.ORM_castledestruction_setting then
+			-- movement_modifier = 1.3
+		-- else
+			-- movement_modifier = 1.8
+		-- end
+		-- if wesnoth.current.turn <= 1 then
+			-- movement_modifier = 1
+		-- end
+		-- local units = wesnoth.get_units{
+			-- side = 1,
+			-- T["not"]{
+				-- T.filter_wml{
+					-- T.status{
+						-- ORM_rush_mod="yes"
+					-- }
+				-- }
+			-- }
+		-- }
 
-		local message = ""
-		for i,u in ipairs(units) do
-			local old_moves = u.moves
-			wesnoth.add_modification(u, "object", {
-				ORM.effect.get(ORM.effect.add_status("ORM_rush_mod"))
-			})
-			message = message .. "unit "..tostring(u.x)..", "..tostring(u.y).." with moves "..tostring(u.moves).." multiplied with "..tostring(movement_modifier).." giving "..tostring(u.moves * movement_modifier) .. " -> "
-			u.moves = u.moves * movement_modifier
-			message = message .. tostring(u.moves) .. "\n"
-			if old_moves > 3.5 and movement_modifier > 1.29 and u.moves == old_moves then
-				wesnoth.message("ORM debug", message)
-				wesnoth.message("ORM error","Movement change not applied correctly! Report to Ravana")
-			end
-			u.moves = old_moves -- TODO re-add if no more oos
-		end
+		-- local message = ""
+		-- for i,u in ipairs(units) do
+			-- local old_moves = u.moves
+			-- wesnoth.add_modification(u, "object", {
+				-- ORM.effect.get(ORM.effect.add_status("ORM_rush_mod"))
+			-- })
+			-- message = message .. "unit "..tostring(u.x)..", "..tostring(u.y).." with moves "..tostring(u.moves).." multiplied with "..tostring(movement_modifier).." giving "..tostring(u.moves * movement_modifier) .. " -> "
+			-- u.moves = u.moves * movement_modifier
+			-- message = message .. tostring(u.moves) .. "\n"
+			-- if old_moves > 3.5 and movement_modifier > 1.29 and u.moves == old_moves then
+				-- wesnoth.message("ORM debug", message)
+				-- wesnoth.message("ORM error","Movement change not applied correctly! Report to Ravana")
+			-- end
+			-- u.moves = old_moves -- TODO re-add if no more oos
+		-- end
 		-- wesnoth.message("ORM debug", message) -- TODO replicate it in small scenario
-	end
+	-- end
 end
 
 function ORM.fun.initialise_difficulty_modes()
 	V.ORM_hpmultiplier_setting = 0
 	local switch = {
-		ultrahardcore = function()
-			V.ORM_hpmultiplier_setting =  V.ORM_hpmultiplier_setting + 1.1
+		ultrahardcore = function() -- TODO see if can be improved to include name in stacktrace
+			V.ORM_hpmultiplier_setting = V.ORM_hpmultiplier_setting + 1.1
 			V.ORM_difficulty_setting = 1.2
 			ORM.fun.init_adaptive_difficulty()
 			ORM.fun.set_village_support(1)
 		end,
 		hardcore = function()
-			V.ORM_hpmultiplier_setting =  V.ORM_hpmultiplier_setting + 1
+			V.ORM_hpmultiplier_setting = V.ORM_hpmultiplier_setting + 1
 			V.ORM_difficulty_setting = 1
 			ORM.fun.init_adaptive_difficulty()
 			ORM.fun.set_village_support(1)
 		end,
 		normal = function()
-			V.ORM_hpmultiplier_setting =  V.ORM_hpmultiplier_setting + 0.9
+			V.ORM_hpmultiplier_setting = V.ORM_hpmultiplier_setting + 0.9
 			V.ORM_difficulty_setting = 0.6
 		end,
 		easy = function()
-			V.ORM_hpmultiplier_setting =  V.ORM_hpmultiplier_setting + 0.8
+			V.ORM_hpmultiplier_setting = V.ORM_hpmultiplier_setting + 0.8
 			V.ORM_difficulty_setting = 0
 			wesnoth.game_config.kill_experience = 12
 		end
