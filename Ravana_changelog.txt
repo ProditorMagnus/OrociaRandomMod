@@ -332,6 +332,10 @@ Swamp map 14,12 to healing spot, for example oasis
 Fix normal wave upgrades for turn 30+
 Rush mod moved back to WML
 Added debug functions that are called on ageless unsynced menu
+Use Xara_Magic_Mod for adaptive difficulty
+
+4.10.9f
+Do not invalidate undo when moving on ronsmap and two suns map item location if item is already takens
 
 
 4.x todo
