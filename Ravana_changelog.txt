@@ -343,6 +343,10 @@ Make spawn labels immutable
 4.10.9h
 Fix predefined bonuses
 
+4.10.9i
+Fix rush mod on castle destruction
+
+
 
 4.x todo
 ! overlay for units showing upgrades
