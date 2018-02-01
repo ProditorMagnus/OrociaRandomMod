@@ -76,7 +76,7 @@ function ORM.fun.apply_wave_modifications()
 
 	local difficulty = V.ORM_difficulty_mode
 
-	if V.ORM_wave_choice_setting == "core_predefined" and (difficulty == "normal" or difficulty=="hardcore") then difficulty = "predefined" end
+	if V.ORM_wave_choice_setting == "core_predefined" and (difficulty == "normal" or difficulty=="hardcore") and ORM.unit_bonuses["t"..wesnoth.current.turn]["predefined"] ~= nil then difficulty = "predefined" end
 	local bonus = ORM.unit_bonuses["t"..wesnoth.current.turn][difficulty]
 	local units = wesnoth.get_units { side = 1 }
 	if bonus == nil then return	end

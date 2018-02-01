@@ -340,6 +340,9 @@ Do not invalidate undo when moving on ronsmap and two suns map item location if 
 4.10.9g
 Make spawn labels immutable
 
+4.10.9h
+Fix predefined bonuses
+
 
 4.x todo
 ! overlay for units showing upgrades
