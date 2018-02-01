@@ -166,8 +166,7 @@ function ORM.fun.update_spawn_labels()
 				text=label_text,
 				color="160,160,0",
 				visible_in_fog=true,
-				visible_in_shroud=true,
-				immutable=false
+				visible_in_shroud=true
 			})
 		end
 	end
