@@ -1,23 +1,24 @@
 --<<
-function ORM.fun.random_unit(level,x,y,side)
+function ORM.fun.random_unit(level,x,y,side,for_side)
 	if level == nil then error("Level is nil") end
 	-- TODO 1.13 use wesnoth.random
 	wesnoth.fire("set_variable", { name = "LUA_random", rand = string.format("%d..%d", 1, #level) })
 	local unitid = level[V.LUA_random]
 	V.LUA_random = nil
 	-- wesnoth.fire("unit", { type = unitid, placement = "map_passable", x = x, y = y, side = side })
-	ORM.fun.spawn_unit(unitid, x, y, side)
+	ORM.fun.spawn_unit(unitid, x, y, side, for_side)
 	-- wesnoth.fire("set_variable", { name = "ORM_last_unit", value = unitid })
 	V.ORM_last_unit = unitid
 end
 
-function ORM.fun.previous_unit(x,y,side)
+function ORM.fun.previous_unit(x,y,side,for_side)
 	local unitid = V.ORM_last_unit
 	-- wesnoth.fire("unit", { type = unitid, placement = "map_passable", x = x, y = y, side = side })
-	ORM.fun.spawn_unit(unitid, x, y, side)
+	ORM.fun.spawn_unit(unitid, x, y, side, for_side)
 end
 
-function ORM.fun.spawn_unit(type, x, y, side)
+function ORM.fun.spawn_unit(type, x, y, side, for_side)
+	if wesnoth.sides[for_side].controller == "null" and not V.ORM_spawn_for_empty then return end
 	-- TODO https://github.com/wesnoth/wesnoth/issues/2358
 	-- local u = wesnoth.create_unit({
 		-- type=type,
@@ -41,22 +42,22 @@ function ORM.fun.spawn_unit_set(level, location, original_type)
 
 	if waveSetting == "ageless_random_full" then
 		for _,loc in ipairs(location) do
-			ORM.fun.random_unit(level, loc.x, loc.y, ai_side)
+			ORM.fun.random_unit(level, loc.x, loc.y, ai_side, loc.for_side)
 		end
 	end
 	if waveSetting == "ageless_random_mirrored" then
 		for i,loc in ipairs(location) do
 			if i == 1 then
-				ORM.fun.random_unit(level, loc.x, loc.y, ai_side)
+				ORM.fun.random_unit(level, loc.x, loc.y, ai_side, loc.for_side)
 			else
-				ORM.fun.previous_unit(loc.x, loc.y, ai_side)
+				ORM.fun.previous_unit(loc.x, loc.y, ai_side, loc.for_side)
 			end
 		end
 	end
 	if waveSetting == "core_predefined" then
 		for _,loc in ipairs(location) do
 			-- wesnoth.fire("unit", { type = original_type, placement = "map_passable", x = loc.x, y = loc.y, side = ai_side })
-			ORM.fun.spawn_unit(original_type, loc.x, loc.y, ai_side)
+			ORM.fun.spawn_unit(original_type, loc.x, loc.y, ai_side, loc.for_side)
 		end
 	end
 end
@@ -108,14 +109,16 @@ function ORM.fun.update_spawn_labels()
 	if ORM.waves["t"..wesnoth.current.turn] ~= nil then
 		for _,v in ipairs(ORM.waves["t"..wesnoth.current.turn]) do
 			for _,loc in ipairs(v.location) do
-				ORM.fun.backport_label({
-					x=loc.x,
-					y=loc.y,
-					text="",
-					visible_in_fog=true,
-					visible_in_shroud=true,
-					immutable=false
-				})
+				if wesnoth.sides[loc.for_side].controller ~= "null" or V.ORM_spawn_for_empty then
+					ORM.fun.backport_label({
+						x=loc.x,
+						y=loc.y,
+						text="",
+						visible_in_fog=true,
+						visible_in_shroud=true,
+						immutable=false
+					})
+				end
 			end
 		end
 	end
@@ -160,14 +163,16 @@ function ORM.fun.update_spawn_labels()
 			if waveSetting == "core_predefined" then
 				label_text = v.original_type
 			end
-			ORM.fun.backport_label({
-				x=loc.x,
-				y=loc.y,
-				text=label_text,
-				color="160,160,0",
-				visible_in_fog=true,
-				visible_in_shroud=true
-			})
+			if wesnoth.sides[loc.for_side].controller ~= "null" or V.ORM_spawn_for_empty then
+				ORM.fun.backport_label({
+					x=loc.x,
+					y=loc.y,
+					text=label_text,
+					color="160,160,0",
+					visible_in_fog=true,
+					visible_in_shroud=true
+				})
+			end
 		end
 	end
 end

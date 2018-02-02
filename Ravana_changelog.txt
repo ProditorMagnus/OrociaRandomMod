@@ -346,6 +346,9 @@ Fix predefined bonuses
 4.10.9i
 Fix rush mod on castle destruction
 
+4.10.9j
+Option to not create enemies for empty sides
+
 
 
 4.x todo
@@ -369,6 +372,7 @@ Consider if ronsmap items should be sidelocked - ron said that can be - to be im
 Look xp setting too, but not very importantly
 Make stuff configurable during game, allow setting start value, and per wave increase, with 120 and 0.02 as initially, see what can be moved to Lua
 Persistent score database
+setting to generate unit lists from currently used era
 
 Plans that would be nice:
 allow player compose waves with menu
