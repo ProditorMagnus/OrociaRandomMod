@@ -135,6 +135,24 @@ function ORM.fun.update_spawn_labels()
 		end
 	end
 	local spawn_label_text = ORM.wave_labels["t"..next_wave][waveSetting]
+	local bonus = ORM.unit_bonuses["t"..next_wave]
+	if bonus ~= nil then
+		local difficulty = V.ORM_difficulty_mode
+		if V.ORM_wave_choice_setting == "core_predefined" and (difficulty == "normal" or difficulty=="hardcore") and ORM.unit_bonuses["t"..wesnoth.current.turn]["predefined"] ~= nil then difficulty = "predefined" end
+		bonus = bonus[difficulty]
+		if bonus ~= nil then
+			local bonus_labels = {}
+			if bonus.name == nil then
+				for _,b in ipairs(bonus) do
+					table.insert(bonus_labels, b.name)
+				end
+			else
+				table.insert(bonus_labels, bonus.name)
+			end
+
+			spawn_label_text = spawn_label_text .. ": " .. table.concat(bonus_labels, ", ")
+		end
+	end
 
 	if spawn_label_text then
 		ORM.fun.backport_label({

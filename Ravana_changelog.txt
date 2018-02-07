@@ -353,6 +353,8 @@ Option to not create enemies for empty sides
 Fix tent
 Remove rush mod mp change, instead that gives adaptive rating +0.1
 
+4.10.9l
+Include wave trait names in wave labels
 
 
 4.x todo
@@ -361,7 +363,6 @@ less players should come with less upgrade spots and less villages too
 Pagawan is my big fan, I should play with him
 ! test for broken saves/replay with ultra
 ! specials for swamp map, maybe extra poison power, lower resists (insect swarm event)
-handle https://forums.wesnoth.org/viewtopic.php?f=15&t=47710&p=621891#p621703
 <22:54 FakeNews> i would love to see the map flood over time
 <23:17 FakeNews> i wish there was an armor to take
 ! armor that gives poison immunity, or item that gives poison to all attacks
