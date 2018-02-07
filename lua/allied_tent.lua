@@ -28,19 +28,19 @@ function ORM.fun.on_allied_tent_move(x, y)
 
 	if V.ORM_agelessunits_available then
 		if V.ORM_tenthealer_setting then
-			ORM.fun.random_unit(ORM.unit.level_two_healer,x,y,wesnoth.current.side)
-			ORM.fun.random_unit(ORM.unit.level_two,x,y,wesnoth.current.side)
+			ORM.fun.random_unit(ORM.unit.level_two_healer,x,y,wesnoth.current.side,wesnoth.current.side)
+			ORM.fun.random_unit(ORM.unit.level_two,x,y,wesnoth.current.side,wesnoth.current.side)
 		else
-			ORM.fun.random_unit(ORM.unit.level_two,x,y,wesnoth.current.side)
-			ORM.fun.random_unit(ORM.unit.level_two,x,y,wesnoth.current.side)
+			ORM.fun.random_unit(ORM.unit.level_two,x,y,wesnoth.current.side,wesnoth.current.side)
+			ORM.fun.random_unit(ORM.unit.level_two,x,y,wesnoth.current.side,wesnoth.current.side)
 		end
 	else
 		if V.ORM_tenthealer_setting then
-			ORM.fun.random_unit(ORM.unit.core_tent,x,y,wesnoth.current.side)
-			ORM.fun.random_unit(ORM.unit.core_healer,x,y,wesnoth.current.side)
+			ORM.fun.random_unit(ORM.unit.core_tent,x,y,wesnoth.current.side,wesnoth.current.side)
+			ORM.fun.random_unit(ORM.unit.core_healer,x,y,wesnoth.current.side,wesnoth.current.side)
 		else
-			ORM.fun.random_unit(ORM.unit.core_tent,x,y,wesnoth.current.side)
-			ORM.fun.random_unit(ORM.unit.core_tent,x,y,wesnoth.current.side)
+			ORM.fun.random_unit(ORM.unit.core_tent,x,y,wesnoth.current.side,wesnoth.current.side)
+			ORM.fun.random_unit(ORM.unit.core_tent,x,y,wesnoth.current.side,wesnoth.current.side)
 		end
 	end
 end

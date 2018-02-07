@@ -14,6 +14,9 @@ function ORM.fun.init_adaptive_difficulty()
 	if wesnoth.game_config.mp_settings.active_mods:find("EXI_Heroic_Mod") then
 		result = result + 0.1
 	end
+	if wesnoth.game_config.mp_settings.active_mods:find("EXI_Rush_Mod") then
+		result = result + 0.1 -- maybe for the future find other solutions like better movecosts
+	end
 	if wesnoth.game_config.mp_settings.active_mods:find("Xara_Magic_Mod") then
 		result = result + 0.3
 	end
