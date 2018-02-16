@@ -55,6 +55,9 @@ function ORM.fun.init_adaptive_difficulty()
 	if (c == "suns") then
 		result = result - 0.1
 	end
+	if V.ORM_upgrade_setting == 0 then
+		result = result - 0.4
+	end
 
 	if (wesnoth.game_config.mp_settings.mp_era == "era_default" or wesnoth.game_config.mp_settings.mp_era == "era_heroes" or wesnoth.game_config.mp_settings.mp_era == "era_khalifate" or wesnoth.game_config.mp_settings.mp_era == "era_khalifate_heroes") then
 		result = result - 0.4

@@ -356,6 +356,9 @@ Remove rush mod mp change, instead that gives adaptive rating +0.1
 4.10.9l
 Include wave trait names in wave labels
 
+4.10.9m
+Adaptive rating -0.4 if no upgrades used
+
 
 4.x todo
 less players should come with less upgrade spots and less villages too
