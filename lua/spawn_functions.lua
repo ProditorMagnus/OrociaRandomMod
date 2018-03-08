@@ -138,7 +138,7 @@ function ORM.fun.update_spawn_labels()
 	local bonus = ORM.unit_bonuses["t"..next_wave]
 	if bonus ~= nil then
 		local difficulty = V.ORM_difficulty_mode
-		if V.ORM_wave_choice_setting == "core_predefined" and (difficulty == "normal" or difficulty=="hardcore") and ORM.unit_bonuses["t"..wesnoth.current.turn]["predefined"] ~= nil then difficulty = "predefined" end
+		if V.ORM_wave_choice_setting == "core_predefined" and (difficulty == "normal" or difficulty=="hardcore") and ORM.unit_bonuses["t"..next_wave]["predefined"] ~= nil then difficulty = "predefined" end
 		bonus = bonus[difficulty]
 		if bonus ~= nil then
 			local bonus_labels = {}

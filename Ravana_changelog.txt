@@ -361,6 +361,7 @@ Adaptive rating -0.4 if no upgrades used
 
 
 4.x todo
+! turn 40 normal had units start with less than max hp
 less players should come with less upgrade spots and less villages too
 ! overlay for units showing upgrades
 Pagawan is my big fan, I should play with him
