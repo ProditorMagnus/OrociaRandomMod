@@ -359,6 +359,8 @@ Include wave trait names in wave labels
 4.10.9m
 Adaptive rating -0.4 if no upgrades used
 
+4.10.9n
+Fix predefined wave label generation
 
 4.x todo
 ! turn 40 normal had units start with less than max hp
