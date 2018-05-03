@@ -16,7 +16,7 @@ ORM.event.once = {}
 ORM.win_turn = 46
 
 function Ravana()
-	return type(AE_condition_use_beta_features) == "function" and AE_condition_use_beta_features()
+	return type(rawget(_G,"AE_condition_use_beta_features")) == "function" and AE_condition_use_beta_features()
 end
 
 local proxy_var_mt = {

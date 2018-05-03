@@ -368,8 +368,13 @@ Update for ageless 4.19
 4.11.1
 Remove EFM units with hex from list as they are quite broken on 1.14 with 4.19 ageless
 
+4.11.1a
+Fix AE_condition_use_beta_features warning
+
 
 4.x todo
+dependencies=Ageless_Era,XP_Modification,Plan_Your_Advancements_Mod,Switch_Leader,Color_Modification,Ally_Village_Modification
+
 ! turn 40 normal had units start with less than max hp
 less players should come with less upgrade spots and less villages too
 ! overlay for units showing upgrades
