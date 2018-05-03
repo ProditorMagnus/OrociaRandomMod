@@ -365,6 +365,9 @@ Fix predefined wave label generation
 4.11.0
 Update for ageless 4.19
 
+4.11.1
+Remove EFM units with hex from list as they are quite broken on 1.14 with 4.19 ageless
+
 
 4.x todo
 ! turn 40 normal had units start with less than max hp
