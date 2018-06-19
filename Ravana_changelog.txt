@@ -371,6 +371,10 @@ Remove EFM units with hex from list as they are quite broken on 1.14 with 4.19 a
 4.11.1a
 Fix AE_condition_use_beta_features warning
 
+4.12.0
+Update for ageless 4.20
+Remove kamikaze units from waves
+
 
 4.x todo
 dependencies=Ageless_Era,XP_Modification,Plan_Your_Advancements_Mod,Switch_Leader,Color_Modification,Ally_Village_Modification
@@ -397,6 +401,7 @@ Look xp setting too, but not very importantly
 Make stuff configurable during game, allow setting start value, and per wave increase, with 120 and 0.02 as initially, see what can be moved to Lua
 Persistent score database
 setting to generate unit lists from currently used era
+do something when shrine is destroyed
 
 Plans that would be nice:
 allow player compose waves with menu
