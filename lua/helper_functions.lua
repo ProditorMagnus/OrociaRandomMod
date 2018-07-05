@@ -89,8 +89,8 @@ function ORM.fun.apply_hpmultiplier()
 
 	for i,u in ipairs(units) do
 		wesnoth.add_modification(u, "object", {
-			ORM.effect.get(ORM.effect.multiply_total_hitpoints(hitpoints_modifier)),
 			ORM.effect.get(ORM.effect.multiply_current_hitpoints(hitpoints_modifier)),
+			ORM.effect.get(ORM.effect.multiply_total_hitpoints(hitpoints_modifier)),
 			ORM.effect.get(ORM.effect.add_status("ORM_hpmultiplied"))
 		})
 	end

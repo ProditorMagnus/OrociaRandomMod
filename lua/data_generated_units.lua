@@ -1253,6 +1253,7 @@ ORM.unit.level_two = {
 	"AE_mag_Atokpi_Samurai",
 	"AE_mag_Bone_Golem",
 	"AE_mag_Legendary_Cyclops",
+	"AE_mag_Cyclops_Necromancer",
 	"AE_mag_Dark_Portal",
 	"AE_mag_Mara",
 	"AE_mag_Pirania_Monstruosa",

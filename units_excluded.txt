@@ -26,3 +26,6 @@ AE_feu_khaganate_Rigid
 AE_feu_khaganate_Stoic
 AE_arc_khthon_Adamantine_Hiding
 AE_mag_Runemaster_Protected
+AE_mag_Goblin_Kamikaze
+AE_mrc_fanatics_Martyr
+AE_efm_imperialists_Sapper
