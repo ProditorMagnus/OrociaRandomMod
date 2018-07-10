@@ -59,7 +59,8 @@ function ORM.fun.init_adaptive_difficulty()
 		result = result - 0.4
 	end
 
-	if (wesnoth.game_config.mp_settings.mp_era == "era_default" or wesnoth.game_config.mp_settings.mp_era == "era_heroes" or wesnoth.game_config.mp_settings.mp_era == "era_khalifate" or wesnoth.game_config.mp_settings.mp_era == "era_khalifate_heroes") then
+	if (wesnoth.game_config.mp_settings.mp_era == "era_default" or wesnoth.game_config.mp_settings.mp_era == "era_heroes" or 
+            wesnoth.game_config.mp_settings.mp_era == "era_dunefolk" or wesnoth.game_config.mp_settings.mp_era == "era_dunefolk_heroes") then
 		result = result - 0.4
 		if (V.ORM_random_ageless_waves) then
 			result = result - 0.2
