@@ -38,7 +38,7 @@ function ORM.event.start()
 
 	V.ORM_random_ageless_waves = ORM.fun.table_contains({"ageless_random_full", "ageless_random_mirrored"}, V.ORM_wave_choice_setting)
 
-	V.ORM_agelessunits_available = wesnoth.game_config.mp_settings.mp_era:find("Ageless") or V.ORM_wave_choice_setting:find("ageless")
+	V.ORM_agelessunits_available = wesnoth.game_config.mp_settings.mp_era:find("Ageless") or V.ORM_wave_choice_setting:find("ageless") or false
 
 	ORM.fun.remove_turn_limit()
 	ORM.fun.initialise_difficulty_modes()
