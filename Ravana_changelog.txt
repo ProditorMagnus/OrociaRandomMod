@@ -384,6 +384,9 @@ Update for ageless 4.21 (one new unit, so small version only)
 4.12.2a
 Replace khalifate with dunefolk
 
+4.12.3
+Update for ageless 4.25
+
 4.x todo
 dependencies=Ageless_Era,XP_Modification,Plan_Your_Advancements_Mod,Switch_Leader,Color_Modification,Ally_Village_Modification
 
