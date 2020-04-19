@@ -387,6 +387,10 @@ Replace khalifate with dunefolk
 4.12.3
 Update for ageless 4.25
 
+4.12.4
+Update for ageless 4.27
+Experimental menu item in top left corner to delay all waves 1 turn
+
 4.x todo
 dependencies=Ageless_Era,XP_Modification,Plan_Your_Advancements_Mod,Switch_Leader,Color_Modification,Ally_Village_Modification
 

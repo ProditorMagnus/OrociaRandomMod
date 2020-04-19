@@ -302,4 +302,8 @@ function ORM.fun.show_setting_labels()
 	})
 end
 
+function ORM.fun.get_effective_turn_number()
+	return wesnoth.current.turn - V.ORM_turn_offset
+end
+
 -->>

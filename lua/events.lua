@@ -19,12 +19,12 @@ function ORM.event.new_turn()
 	if V.ORM_difficulty_mode == "ultrahardcore" then
 		ORM.fun.increment_hpmultiplier()
 	end
-	if wesnoth.current.turn == 30 and V.ORM_difficulty_mode == "normal" then
+	if ORM.fun.get_effective_turn_number() == 30 and V.ORM_difficulty_mode == "normal" then
 		-- So that charge, magical and backstab wont be too low
 		V.ORM_difficulty_setting = V.ORM_difficulty_setting + 0.4
 	end
 	if V.ORM_map_setting == "swamp" then
-		wesnoth.game_config.poison_amount = 10 + wesnoth.current.turn / 4
+		wesnoth.game_config.poison_amount = 10 + ORM.fun.get_effective_turn_number() / 4
 	end
 	ORM.fun.spawn_wave() -- calls unit spawning, label creation, turn bonus
 	ORM.fun.show_setting_labels() -- remakes labels against bonusspam
@@ -32,6 +32,9 @@ end
 
 function ORM.event.start()
 	V.Rav_DBG_1 = true -- AI side, so able to undroid it and use commands
+	V.ORM_turn_offset = 0
+	ORM.win_turn = 46
+	ORM.turns_to_win_from_last_wave = 6
 
 	if V.ORM_hpmultiplier_setting == nil then V.ORM_hpmultiplier_setting = 0 end
 	V.ORM_hpmultiplier_setting = V.ORM_hpmultiplier_setting * 0.01
@@ -42,10 +45,36 @@ function ORM.event.start()
 
 	ORM.fun.remove_turn_limit()
 	ORM.fun.initialise_difficulty_modes()
+
+	wesnoth.wml_actions.set_menu_item{
+		id='ORM_delay_waves',
+		description='Make all future waves come 1 turn later',
+		T.filter_location{
+			x=1,
+			y=1
+		},
+		T.command{
+			T.lua{
+				code='V.ORM_turn_offset = V.ORM_turn_offset + 1'
+			},
+			T.lua{
+				code='wesnoth.message("Use wave delaying at your own risk, and note that if you delay enough times (such as right after wave spawned), you can have previously spawned wave spawn again - effectively endless game mode. Current delay: "..V.ORM_turn_offset.." turn(s)")'
+			}
+		}
+	}
 end
 
 function ORM.event.side_1_turn_refresh()
 	ORM.fun.apply_hpmultiplier()
 	-- ORM.fun.apply_rush_mod() -- !!!! OOS, so moved to WML
+end
+
+function ORM.event.side_turn()
+	if ORM.fun.get_effective_turn_number() == ORM.win_turn and V.side_number ~= 1 then
+		wesnoth.wml_actions.endlevel{result="victory"}
+	end
+	if ORM.fun.get_effective_turn_number() > ORM.win_turn - ORM.turns_to_win_from_last_wave and #wesnoth.get_units{side=1} < 2 then
+		wesnoth.wml_actions.end_turn{}
+	end
 end
 -->>

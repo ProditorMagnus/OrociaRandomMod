@@ -63,8 +63,8 @@ function ORM.fun.spawn_unit_set(level, location, original_type)
 end
 
 function ORM.fun.spawn_wave()
-	if ORM.waves["t"..wesnoth.current.turn] ~= nil then
-		for _,v in ipairs(ORM.waves["t"..wesnoth.current.turn]) do
+	if ORM.waves["t"..ORM.fun.get_effective_turn_number()] ~= nil then
+		for _,v in ipairs(ORM.waves["t"..ORM.fun.get_effective_turn_number()]) do
 			ORM.fun.spawn_unit_set(v.random_level, v.location, v.original_type)
 		end
 		ORM.fun.update_spawn_labels()
@@ -73,12 +73,12 @@ function ORM.fun.spawn_wave()
 end
 
 function ORM.fun.apply_wave_modifications()
-	if ORM.unit_bonuses["t"..wesnoth.current.turn] == nil then return end
+	if ORM.unit_bonuses["t"..ORM.fun.get_effective_turn_number()] == nil then return end
 
 	local difficulty = V.ORM_difficulty_mode
 
-	if V.ORM_wave_choice_setting == "core_predefined" and (difficulty == "normal" or difficulty=="hardcore") and ORM.unit_bonuses["t"..wesnoth.current.turn]["predefined"] ~= nil then difficulty = "predefined" end
-	local bonus = ORM.unit_bonuses["t"..wesnoth.current.turn][difficulty]
+	if V.ORM_wave_choice_setting == "core_predefined" and (difficulty == "normal" or difficulty=="hardcore") and ORM.unit_bonuses["t"..ORM.fun.get_effective_turn_number()]["predefined"] ~= nil then difficulty = "predefined" end
+	local bonus = ORM.unit_bonuses["t"..ORM.fun.get_effective_turn_number()][difficulty]
 	local units = wesnoth.get_units { side = 1 }
 	if bonus == nil then return	end
 	for _,u in ipairs(units) do
@@ -106,8 +106,8 @@ function ORM.fun.update_spawn_labels()
 	local waveSetting = V.ORM_wave_choice_setting
 
 	-- remove labels after spawning
-	if ORM.waves["t"..wesnoth.current.turn] ~= nil then
-		for _,v in ipairs(ORM.waves["t"..wesnoth.current.turn]) do
+	if ORM.waves["t"..ORM.fun.get_effective_turn_number()] ~= nil then
+		for _,v in ipairs(ORM.waves["t"..ORM.fun.get_effective_turn_number()]) do
 			for _,loc in ipairs(v.location) do
 				if wesnoth.sides[loc.for_side].controller ~= "null" or V.ORM_spawn_for_empty then
 					ORM.fun.backport_label({
@@ -123,12 +123,12 @@ function ORM.fun.update_spawn_labels()
 		end
 	end
 
-	local next_wave = wesnoth.current.turn+1
+	local next_wave = ORM.fun.get_effective_turn_number()+1
 	local wave_trial_limit = next_wave + 10
 	while ORM.waves["t"..next_wave] == nil do
 		next_wave = next_wave+1
 		if next_wave > wave_trial_limit then
-			if wesnoth.current.turn ~= ORM.win_turn then
+			if ORM.fun.get_effective_turn_number() ~= ORM.win_turn then
 				helper.wml_error("ORM.fun.update_spawn_labels() finding next wave failed")
 			end
 			return
@@ -159,13 +159,13 @@ function ORM.fun.update_spawn_labels()
 			x=14,
 			y=2,
 			color="255,127,0",
-			text="Turn "..next_wave..": " .. spawn_label_text
+			text="Turn "..next_wave+V.ORM_turn_offset..": " .. spawn_label_text
 		})
 		ORM.fun.backport_label({
 			x=14,
 			y=21,
 			color="255,127,0",
-			text="Turn "..next_wave..": " .. spawn_label_text
+			text="Turn "..next_wave+V.ORM_turn_offset..": " .. spawn_label_text
 		})
 	end
 
