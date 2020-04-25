@@ -128,7 +128,7 @@ function ORM.fun.update_spawn_labels()
 	while ORM.waves["t"..next_wave] == nil do
 		next_wave = next_wave+1
 		if next_wave > wave_trial_limit then
-			if ORM.fun.get_effective_turn_number() ~= ORM.win_turn then
+			if ORM.fun.get_effective_turn_number() ~= V.ORM_win_turn then
 				helper.wml_error("ORM.fun.update_spawn_labels() finding next wave failed")
 			end
 			return

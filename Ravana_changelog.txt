@@ -391,7 +391,11 @@ Update for ageless 4.25
 Update for ageless 4.27
 Experimental menu item in top left corner to delay all waves 1 turn
 
+4.12.4a
+Fix error message after reloading
+
 4.x todo
+consider hp multiplier and delayed waves
 dependencies=Ageless_Era,XP_Modification,Plan_Your_Advancements_Mod,Switch_Leader,Color_Modification,Ally_Village_Modification
 
 ! turn 40 normal had units start with less than max hp

@@ -33,8 +33,8 @@ end
 function ORM.event.start()
 	V.Rav_DBG_1 = true -- AI side, so able to undroid it and use commands
 	V.ORM_turn_offset = 0
-	ORM.win_turn = 46
-	ORM.turns_to_win_from_last_wave = 6
+	V.ORM_win_turn = 46
+	V.ORM_turns_to_win_from_last_wave = 6
 
 	if V.ORM_hpmultiplier_setting == nil then V.ORM_hpmultiplier_setting = 0 end
 	V.ORM_hpmultiplier_setting = V.ORM_hpmultiplier_setting * 0.01
@@ -70,10 +70,10 @@ function ORM.event.side_1_turn_refresh()
 end
 
 function ORM.event.side_turn()
-	if ORM.fun.get_effective_turn_number() == ORM.win_turn and V.side_number ~= 1 then
+	if ORM.fun.get_effective_turn_number() == V.ORM_win_turn and V.side_number ~= 1 then
 		wesnoth.wml_actions.endlevel{result="victory"}
 	end
-	if ORM.fun.get_effective_turn_number() > ORM.win_turn - ORM.turns_to_win_from_last_wave and #wesnoth.get_units{side=1} < 2 then
+	if ORM.fun.get_effective_turn_number() > V.ORM_win_turn - V.ORM_turns_to_win_from_last_wave and #wesnoth.get_units{side=1} < 2 then
 		wesnoth.wml_actions.end_turn{}
 	end
 end
