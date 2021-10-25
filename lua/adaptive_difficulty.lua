@@ -2,22 +2,24 @@
 
 function ORM.fun.init_adaptive_difficulty()
 	local result = 0
-	if wesnoth.game_config.mp_settings.active_mods:find("StealingWeaponsMode") then
+	-- another way - f=wesnoth.require "functional", f.find(wesnoth.scenario.modifications, function (e) return e.id=="plan_unit_advance" end)
+	local modifications = ORM.fun.map(function(mod) return mod.id end, wesnoth.scenario.modifications)
+	if ORM.fun.table_contains(modifications, "StealingWeaponsMode") then
 		result = result + 0.2
 	end
-	if wesnoth.game_config.mp_settings.active_mods:find("BonusSpam") then
+	if ORM.fun.table_contains(modifications, "BonusSpam") then
 		result = result + 0.5
 	end
-	if wesnoth.game_config.mp_settings.active_mods:find("CanBeOnlyOne") then
+	if ORM.fun.table_contains(modifications, "CanBeOnlyOne") then
 		result = result + 6.66
 	end
-	if wesnoth.game_config.mp_settings.active_mods:find("EXI_Heroic_Mod") then
+	if ORM.fun.table_contains(modifications, "EXI_Heroic_Mod") then
 		result = result + 0.1
 	end
-	if wesnoth.game_config.mp_settings.active_mods:find("EXI_Rush_Mod") then
+	if ORM.fun.table_contains(modifications, "EXI_Rush_Mod") then
 		result = result + 0.1 -- maybe for the future find other solutions like better movecosts
 	end
-	if wesnoth.game_config.mp_settings.active_mods:find("Xara_Magic_Mod") then
+	if ORM.fun.table_contains(modifications, "Xara_Magic_Mod") then
 		result = result + 0.3
 	end
 
@@ -59,8 +61,8 @@ function ORM.fun.init_adaptive_difficulty()
 		result = result - 0.4
 	end
 
-	if (wesnoth.game_config.mp_settings.mp_era == "era_default" or wesnoth.game_config.mp_settings.mp_era == "era_heroes" or 
-            wesnoth.game_config.mp_settings.mp_era == "era_dunefolk" or wesnoth.game_config.mp_settings.mp_era == "era_dunefolk_heroes") then
+	if (wesnoth.scenario.era.id == "era_default" or wesnoth.scenario.era.id == "era_heroes" or 
+            wesnoth.scenario.era.id == "era_dunefolk" or wesnoth.scenario.era.id == "era_dunefolk_heroes") then
 		result = result - 0.4
 		if (V.ORM_random_ageless_waves) then
 			result = result - 0.2

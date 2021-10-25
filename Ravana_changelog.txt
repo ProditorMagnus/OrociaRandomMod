@@ -394,6 +394,10 @@ Experimental menu item in top left corner to delay all waves 1 turn
 4.12.4a
 Fix error message after reloading
 
+4.13.0
+Update for 1.16
+
+
 4.x todo
 consider hp multiplier and delayed waves
 dependencies=Ageless_Era,XP_Modification,Plan_Your_Advancements_Mod,Switch_Leader,Color_Modification,Ally_Village_Modification
