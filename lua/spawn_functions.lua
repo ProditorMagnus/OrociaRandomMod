@@ -18,7 +18,7 @@ function ORM.fun.previous_unit(x,y,side,for_side)
 end
 
 function ORM.fun.spawn_unit(type, x, y, side, for_side)
-	if wesnoth.sides[for_side].controller == "null" and not V.ORM_spawn_for_empty then return end
+	if wesnoth.sides[for_side].controller == "null" and not V.ORM_spawn_for_empty and wesnoth.game_config.mp_settings.mp_scenario[-1] == "3" then return end
 	-- TODO https://github.com/wesnoth/wesnoth/issues/2358
 	-- local u = wesnoth.create_unit({
 		-- type=type,

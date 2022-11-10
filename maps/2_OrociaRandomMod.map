@@ -1,0 +1,28 @@
+border_size=1
+usage=map
+
+_off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, Gg, Wwt, Gg, Wwf, Wwt, Wwf, Hh, Rd, Gg, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, Gg, Gg, Gg, Wwf, Wwt, Wwt, Ss, Gs^Fp, Rd, Rd, Gg, Gg, Gg, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, Wwf, Gg, Gg, Gg, Hh, Gg, Wwf, Gg, Gg, Mm, Rd, Gg, Gs^Fp, Gg, Wwt, Wwt, Gg, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, Gg, Wwt, Gg, Gg, Gs^Fp, Mm^Vhh, Wwt, Gs^Fp, Gg, Rd, Rd, Gg, Gg, Gg, Hh, Wwt, Hh, Gg, Gg, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, _off^_usr, Gg, Gs^Fp, Wwf, Gs^Fp, Gg, Ds, Wwt, Wwt, Gg, Gg, Ch, Gg, Gs^Fet, Gg, Gg, Gg, Ww, Gg, Gg, Gg, Gg, _off^_usr, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, _off^_usr, Wwf, Gg, Wwt, Gg, Wwf, Wwt, Ss, Ds, Hh, Gg, Ww^Bw|, Gg, Hh^Vhh, Mm, Gg, Gg, Ds, Wwf, Gs^Fp, Gg, Hh, _off^_usr, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, Gg, Gg, Wwt, Ds, Wwt, Mm, Gg, Wwt, Ss^Vhs, Wwf, Ww, Ww^Bw|, Ww, Wwf, Gs^Fp, Gg, Gs^Fet, Wwf, Wwt, Rd, Rd, Rd, Rd, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, Gg, Wwf, Gg, Wwt, Wwt, Hh, Gg, Ww, Ww, Ch, Ch, 3 Kh, Ch, Ch, Ww, Ww, Wwf, Hh, Wwt, Wwt, Gg, Wwf, Gg, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, Wwf, Hh, Wwt, Gg, Gs^Fp, Hh^Vhh, Gg, Ww, Ch, Rr, Rr, Rr, Rr, Gg^Vh, Ch, Ww, Gg, Gs^Fet, Mm, Wwt, Gg, Ss^Vm, Wwf, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, Gg, Ss^Vm, Ss, Wwt, Gg, Gs^Fet, Gg, Wwf, Ch, Rr, Rr, Rr, Rr, Rr, Ch, Wwf, Gg, Hh^Vhh, Gg, Gg, Ss, Hh, Gg, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, Wwf, Wwf, Gg, Wwt, Mm, Hh, Gg, Ww, Ch, Gg^Vh, Rr, Rr, Rr, Rr, Ch, Ww, Gg, Hh, Gs^Fp, Wwt, Wwt, Wwf, Wwf, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, Gg, Rd, Gg, Rd, Wwt, Wwf, Wwf, Wwt, Ch, Ch, Rr, 2 Kh, Rr, Ch, Ch, Wwt, Gg, Mm, Wwt, Ds, Gg, Gg, Gg, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, Rd, Hh, Rd, Gs^Fp, Wwt, Gg, Gg, Gg, Ww, Wwf, Ch, Wwt^Bw|, Ch, Wwf, Ww, Wwt, Gg, Wwf, Wwt, Wwt, Wwt, Wwf, Gg, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, Gg, Gg, Gg, Gg, Wwf, Ds, Gs^Fet, Gg, Gs^Fp, Hh^Vhh, Ww, Wwt^Bw|, Ww, Hh, Ss^Vhs, Ss, Wwt, Gg, Gg, Wwf, Gg, Gg, Wwf, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, _off^_usr, Gg, Gg, Gg, Wwt, Wwt, Gg, Gg, Mm, Gs^Fet, Gg, Ch, Gg, Gg, Ds, Wwt, Wwt, Gg, Gg, Wwt, Gg, Gg, _off^_usr, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, Gg, Gg, Gg, Wwt, Gg, Gg, Gg, Gg, Gg, Rd, Gg, Gs^Fp, Wwt, Mm^Vhh, Ds, Gg, Gs^Fp, Wwt, Gs^Fp, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, Gg, Gg, Hh, Wwt, Hh, Gs^Fp, Gg, Rd, Rd, Gg, Gg, Wwf, Wwt, Hh, Gs^Fp, Gg, Gg, Wwf, Gg, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, Wwt, Gg, Gg, Gg, Gg, Rd, Mm, Ss, Gg, Wwt, Gg, Gg, Gg, Gg, Gg, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, Gg, Gg, Rd, Hh, Gs^Fp, Wwt, Wwt, Gg, Wwf, Gg, Gg, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, Rd, _off^_usr, Wwf, _off^_usr, Wwt, _off^_usr, Wwt, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr
+_off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr, _off^_usr
