@@ -18,7 +18,7 @@ function ORM.fun.previous_unit(x,y,side,for_side)
 end
 
 function ORM.fun.spawn_unit(type, x, y, side, for_side)
-	if wesnoth.sides[for_side].controller == "null" and not V.ORM_spawn_for_empty and wesnoth.game_config.mp_settings.mp_scenario[-1] == "3" then return end
+	if wesnoth.game_config.mp_settings.mp_scenario[-1] == "3" and wesnoth.sides[for_side].controller == "null" and not V.ORM_spawn_for_empty then return end
 	-- TODO https://github.com/wesnoth/wesnoth/issues/2358
 	-- local u = wesnoth.create_unit({
 		-- type=type,
@@ -109,7 +109,7 @@ function ORM.fun.update_spawn_labels()
 	if ORM.waves["t"..ORM.fun.get_effective_turn_number()] ~= nil then
 		for _,v in ipairs(ORM.waves["t"..ORM.fun.get_effective_turn_number()]) do
 			for _,loc in ipairs(v.location) do
-				if wesnoth.sides[loc.for_side].controller ~= "null" or V.ORM_spawn_for_empty then
+				if wesnoth.game_config.mp_settings.mp_scenario[-1] ~= "3" or wesnoth.sides[loc.for_side].controller ~= "null" or V.ORM_spawn_for_empty then
 					ORM.fun.backport_label({
 						x=loc.x,
 						y=loc.y,
@@ -181,7 +181,7 @@ function ORM.fun.update_spawn_labels()
 			if waveSetting == "core_predefined" then
 				label_text = v.original_type
 			end
-			if wesnoth.sides[loc.for_side].controller ~= "null" or V.ORM_spawn_for_empty then
+			if wesnoth.game_config.mp_settings.mp_scenario[-1] ~= "3" or wesnoth.sides[loc.for_side].controller ~= "null" or V.ORM_spawn_for_empty then
 				ORM.fun.backport_label({
 					x=loc.x,
 					y=loc.y,

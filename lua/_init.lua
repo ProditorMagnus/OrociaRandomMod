@@ -22,7 +22,7 @@ local proxy_var_mt = {
 	__index    = function(t, k)
 		local v = wml.variables_proxy[k]
 		if v == nil and Ravana() then
-			wesnoth.message("INFO","V."..k.." is nil at "..debug.traceback("",2))
+			--wesnoth.message("INFO","V."..k.." is nil at "..debug.traceback("",2))
 		end
 		return v
 	end,
