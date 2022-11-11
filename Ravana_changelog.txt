@@ -403,6 +403,10 @@ New maps from IPS
 4.14.1
 Limit spawn for empty setting for 3p map
 
+4.14.2
+Remove fall map custom arsenal logic
+Fix some different player number related issues
+
 
 4.x todo
 consider hp multiplier and delayed waves
