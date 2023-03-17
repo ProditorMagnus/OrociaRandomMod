@@ -407,6 +407,11 @@ Limit spawn for empty setting for 3p map
 Remove fall map custom arsenal logic
 Fix some different player number related issues
 
+4.14.3
+Update for ageless 4.29
+Update spawn labels when delaying waves
+Change zonk to less punishing version, damage-1 or mp-1 instead of strike-1 or damage-2
+
 
 4.x todo
 consider hp multiplier and delayed waves

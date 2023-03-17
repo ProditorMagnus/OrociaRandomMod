@@ -58,6 +58,9 @@ function ORM.event.start()
 				code='V.ORM_turn_offset = V.ORM_turn_offset + 1'
 			},
 			T.lua{
+				code='ORM.fun.update_spawn_labels()'
+			},
+			T.lua{
 				code='wesnoth.message("Use wave delaying at your own risk, and note that if you delay enough times (such as right after wave spawned), you can have previously spawned wave spawn again - effectively endless game mode. Current delay: "..V.ORM_turn_offset.." turn(s)")'
 			}
 		}
