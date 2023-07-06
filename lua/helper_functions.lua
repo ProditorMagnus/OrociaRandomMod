@@ -161,6 +161,7 @@ function ORM.fun.initialise_difficulty_modes()
 			V.ORM_hpmultiplier_setting = V.ORM_hpmultiplier_setting + 0.8
 			V.ORM_difficulty_setting = 0
 			wesnoth.game_config.kill_experience = 12
+			ORM.fun.set_village_support(3)
 		end
 	}
 	switch[V.ORM_difficulty_mode]()
