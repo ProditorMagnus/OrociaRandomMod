@@ -1442,7 +1442,6 @@ ORM.unit.level_two = {
 	"AE_stf_free_saurians_Swamp_Guard",
 	"AE_stf_free_saurians_Tarantula",
 	"AE_stf_triththa_Armorer",
-	"AE_stf_triththa_Ballista",
 	"AE_stf_triththa_Charger",
 	"AE_stf_triththa_Compounder",
 	"AE_stf_triththa_Guard",
