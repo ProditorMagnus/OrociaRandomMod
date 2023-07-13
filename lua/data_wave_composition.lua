@@ -260,6 +260,11 @@ ORM.waves = {
 }
 
 ORM.wave_labels = {
+	t1 = {
+		ageless_random_full = "Wave 1",
+		ageless_random_mirrored = "Wave 1",
+		core_predefined = "Naga Fighters"
+	},
 	t3 = {
 		ageless_random_full = "Wave 2",
 		ageless_random_mirrored = "Wave 2",

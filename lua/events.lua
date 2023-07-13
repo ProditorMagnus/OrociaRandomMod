@@ -19,14 +19,16 @@ function ORM.event.new_turn()
 	if V.ORM_difficulty_mode == "ultrahardcore" then
 		ORM.fun.increment_hpmultiplier()
 	end
-	if ORM.fun.get_effective_turn_number() == 30 and V.ORM_difficulty_mode == "normal" then
-		-- So that charge, magical and backstab wont be too low
+	if ORM.fun.get_effective_turn_number() == 30 and V.ORM_difficulty_mode == "normal" and not V.ORM_normal_difficulty_setting_endgame_mode_adjusted then
+		-- So that charge, magical and backstab wont be too low -- ORM_normal_difficulty_setting_endgame_mode_adjusted to not overbuff when repeating waves
 		V.ORM_difficulty_setting = V.ORM_difficulty_setting + 0.4
+		V.ORM_normal_difficulty_setting_endgame_mode_adjusted = true
 	end
 	if V.ORM_map_setting == "swamp" then
 		wesnoth.game_config.poison_amount = 10 + ORM.fun.get_effective_turn_number() / 4
 	end
-	ORM.fun.spawn_wave() -- calls unit spawning, label creation, turn bonus
+	ORM.fun.spawn_wave() -- calls unit spawning, turn bonus
+	ORM.fun.update_spawn_labels() -- label creation happens every turn to better support wave repeating
 	ORM.fun.show_setting_labels() -- remakes labels against bonusspam
 end
 
@@ -45,6 +47,7 @@ function ORM.event.start()
 
 	ORM.fun.remove_turn_limit()
 	ORM.fun.initialise_difficulty_modes()
+	V.ORM_normal_difficulty_setting_endgame_mode_adjusted = false
 
 	wesnoth.wml_actions.set_menu_item{
 		id='ORM_delay_waves',
@@ -69,7 +72,6 @@ end
 
 function ORM.event.side_1_turn_refresh()
 	ORM.fun.apply_hpmultiplier()
-	-- ORM.fun.apply_rush_mod() -- !!!! OOS, so moved to WML
 end
 
 function ORM.event.side_turn()

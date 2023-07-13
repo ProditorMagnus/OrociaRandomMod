@@ -67,7 +67,6 @@ function ORM.fun.spawn_wave()
 		for _,v in ipairs(ORM.waves["t"..ORM.fun.get_effective_turn_number()]) do
 			ORM.fun.spawn_unit_set(v.random_level, v.location, v.original_type)
 		end
-		ORM.fun.update_spawn_labels()
 	end
 	ORM.fun.apply_wave_modifications()
 end
@@ -105,21 +104,17 @@ end
 function ORM.fun.update_spawn_labels()
 	local waveSetting = V.ORM_wave_choice_setting
 
-	-- remove labels after spawning
-	if ORM.waves["t"..ORM.fun.get_effective_turn_number()] ~= nil then
-		for _,v in ipairs(ORM.waves["t"..ORM.fun.get_effective_turn_number()]) do
-			for _,loc in ipairs(v.location) do
-				if wesnoth.game_config.mp_settings.mp_scenario[-1] ~= "3" or wesnoth.sides[loc.for_side].controller ~= "null" or V.ORM_spawn_for_empty then
-					ORM.fun.backport_label({
-						x=loc.x,
-						y=loc.y,
-						text="",
-						visible_in_fog=true,
-						visible_in_shroud=true,
-						immutable=false
-					})
-				end
-			end
+	-- remove and recreate all spawn labels every turn
+	for _, v in pairs(ORM.loc) do
+		for _, loc in ipairs(v) do
+			ORM.fun.backport_label({
+				x=loc.x,
+				y=loc.y,
+				text="",
+				visible_in_fog=true,
+				visible_in_shroud=true,
+				immutable=false
+			})
 		end
 	end
 
@@ -134,6 +129,7 @@ function ORM.fun.update_spawn_labels()
 			return
 		end
 	end
+
 	local spawn_label_text = ORM.wave_labels["t"..next_wave][waveSetting]
 	local bonus = ORM.unit_bonuses["t"..next_wave]
 	if bonus ~= nil then
@@ -182,14 +178,26 @@ function ORM.fun.update_spawn_labels()
 				label_text = v.original_type
 			end
 			if wesnoth.game_config.mp_settings.mp_scenario[-1] ~= "3" or wesnoth.sides[loc.for_side].controller ~= "null" or V.ORM_spawn_for_empty then
-				ORM.fun.backport_label({
-					x=loc.x,
-					y=loc.y,
-					text=label_text,
-					color="160,160,0",
-					visible_in_fog=true,
-					visible_in_shroud=true
-				})
+				-- if wave is next turn then labels are more red
+				if next_wave == ORM.fun.get_effective_turn_number()+1 then
+					ORM.fun.backport_label({
+						x=loc.x,
+						y=loc.y,
+						text=label_text,
+						color="240,80,0",
+						visible_in_fog=true,
+						visible_in_shroud=true
+					})
+				else
+					ORM.fun.backport_label({
+						x=loc.x,
+						y=loc.y,
+						text=label_text,
+						color="160,160,0",
+						visible_in_fog=true,
+						visible_in_shroud=true
+					})
+				end
 			end
 		end
 	end

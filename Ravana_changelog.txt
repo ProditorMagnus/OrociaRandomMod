@@ -416,6 +416,14 @@ Change zonk to less punishing version, damage-1 or mp-1 instead of strike-1 or d
 Update for ageless 4.30
 Easy village support to 3
 
+4.14.4a
+Fix for adaptive difficulty on normal when repeating turn 30 equivalent
+Recreate spawn labels every turn to better support wave repeating
+Different spawn label color when they spawn next turn
+(Ultra hardcore village support stays 1)
+Hardcore village support to 2
+Normal village support to 3
+Easy village support to 4
 
 4.x todo
 consider hp multiplier and delayed waves
