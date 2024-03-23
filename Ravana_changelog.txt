@@ -434,6 +434,9 @@ Update for ageless 4.32
 4.14.7
 Update for ageless 4.33
 
+4.14.7a
+Use #00ff00 instead of green
+
 
 4.x todo
 consider hp multiplier and delayed waves
