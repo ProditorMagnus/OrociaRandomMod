@@ -440,12 +440,17 @@ Use #00ff00 instead of green
 4.14.8
 Update for ageless 4.34, including tent update for EoMa
 
+4.14.9
+Update for ageless 4.35
+Try solve wesnoth.game_config.kill_experience = 12 not staying after reload
 
-got idea to change nothings in upgrade rotation to 1-2 hp heal to not feel so bad
-random waves only from selected era
+
+
 
 
 4.x todo
+got idea to change nothings in upgrade rotation to 1-2 hp heal to not feel so bad
+random waves only from selected era
 consider hp multiplier and delayed waves
 dependencies=Ageless_Era,XP_Modification,Plan_Your_Advancements_Mod,Switch_Leader,Color_Modification,Ally_Village_Modification
 

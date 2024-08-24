@@ -30,6 +30,19 @@ function ORM.event.new_turn()
 	ORM.fun.spawn_wave() -- calls unit spawning, turn bonus
 	ORM.fun.update_spawn_labels() -- label creation happens every turn to better support wave repeating
 	ORM.fun.show_setting_labels() -- remakes labels against bonusspam
+
+	local switch = {
+		ultrahardcore = function()
+		end,
+		hardcore = function()
+		end,
+		normal = function()
+		end,
+		easy = function()
+			wesnoth.game_config.kill_experience = 12
+		end
+	}
+	switch[V.ORM_difficulty_mode]()
 end
 
 function ORM.event.start()
