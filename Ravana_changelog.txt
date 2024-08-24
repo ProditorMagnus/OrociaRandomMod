@@ -441,7 +441,7 @@ Use #00ff00 instead of green
 Update for ageless 4.34, including tent update for EoMa
 
 4.14.9
-Update for ageless 4.35
+Update for ageless 4.36
 Try solve wesnoth.game_config.kill_experience = 12 not staying after reload
 
 
