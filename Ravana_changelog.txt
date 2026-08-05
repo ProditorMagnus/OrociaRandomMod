@@ -457,6 +457,9 @@ Update for ageless 4.39
 Fix units spawning partially damaged with hp multiplier
 Update for ageless 4.40
 
+4.14.14
+Added Easy upgrade type, same as Normal but without nothing
+
 
 
 4.x todo
