@@ -149,7 +149,8 @@ function ORM.fun.show_setting_labels()
 		[1] = "Randomless (Sequence->res->hp->dmg->mv->)",
 		[2] = "Normal (Nothing(2)/res/hp/dmg/mv/str)",
 		[3] = "Chaos (Zonk/res/hp/dmg/str/mv)",
-		[4] = "Mega Chaos (Zonk/res/hp/dmg/mv/str/def)"
+		[4] = "Mega Chaos (Zonk/res/hp/dmg/mv/str/def)",
+		[5] = "Easy (res/hp/dmg/mv/str)"
 	}
 	ORM.fun.backport_label({
 		x=2,
